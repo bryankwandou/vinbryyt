@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+/*
+  Sistem visual VinBryYT
+  --------------------------------
+  Dasar tinta hangat, bukan abu biru. Aksen tembaga diambil dari warna
+  senja Papua dan dari rona lampu ruang sunting. Satu aksen saja supaya
+  penekanan tetap berarti ketika dipakai.
+*/
+
+@theme {
+  --color-ink-950: #08080a;
+  --color-ink-900: #0b0b0d;
+  --color-ink-850: #121214;
+  --color-ink-800: #17171a;
+  --color-ink-700: #232327;
+  --color-ink-600: #35353b;
+
+  --color-bone-50: #f6f3ec;
+  --color-bone-100: #ece7dd;
+  --color-bone-300: #b9b3a7;
+  --color-bone-500: #8a857b;
+  --color-bone-600: #6a655d;
+
+  --color-ember-300: #ffa06b;
+  --color-ember-400: #ff7a3d;
+  --color-ember-500: #f2571b;
+  --color-ember-600: #cf4210;
+
+  --color-brass-400: #e0b25c;
+  --color-brass-500: #c9992f;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: var(--font-display), Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+:root {
+  --page: var(--color-ink-900);
+  --surface: var(--color-ink-850);
+  --line: rgba(246, 243, 236, 0.09);
+  --line-strong: rgba(246, 243, 236, 0.18);
+  --text: var(--color-bone-50);
+  --text-dim: var(--color-bone-300);
+  --text-faint: var(--color-bone-500);
+  --accent: var(--color-ember-400);
+  --glow: rgba(255, 122, 61, 0.16);
+}
+
+:root[data-theme="light"] {
+  --page: #faf8f4;
+  --surface: #ffffff;
+  --line: rgba(11, 11, 13, 0.1);
+  --line-strong: rgba(11, 11, 13, 0.2);
+  --text: #131315;
+  --text-dim: #4d4a45;
+  --text-faint: #7c776e;
+  --accent: var(--color-ember-600);
+  --glow: rgba(207, 66, 16, 0.1);
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--page);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--accent);
+  color: #0b0b0d;
+}
+
+/* Jalur fokus yang terlihat di kedua tema */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Butiran halus supaya bidang gelap tidak terasa mati */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.rule {
+  border-top: 1px solid var(--line);
+}
+
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.link-underline {
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s var(--ease-out-expo);
+}
+.link-underline:hover {
+  background-size: 100% 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
