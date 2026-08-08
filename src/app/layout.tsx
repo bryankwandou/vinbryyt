@@ -3,6 +3,8 @@ import { Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { StructuredData } from "@/components/StructuredData";
+import { themeBootScript } from "@/components/ThemeToggle";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -47,12 +49,22 @@ export const metadata: Metadata = {
     title: "VinBryYT — Vincentius Bryan Kwandou",
     description:
       "Kode dan kamera. Rel pembayaran Solana, perangkat operasional, dan 104 repositori yang terbuka untuk diperiksa.",
+    images: [
+      {
+        url: "/og.png",
+        width: 2400,
+        height: 1260,
+        alt: "VinBryYT — Vincentius Bryan Kwandou, Jayapura, Indonesia",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "VinBryYT — Vincentius Bryan Kwandou",
     description: "Kode dan kamera. 104 repositori terbuka, rel pembayaran di atas Solana.",
+    images: ["/og.png"],
   },
+  alternates: { canonical: "/" },
   robots: { index: true, follow: true },
 };
 
@@ -66,6 +78,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="id" className={`${inter.variable} ${display.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
+        <StructuredData />
+      </head>
       <body className="grain antialiased">
         <a
           href="#isi"

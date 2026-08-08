@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { Wordmark } from "./Logo";
+import { ThemeToggle } from "./ThemeToggle";
 
 const nav = [
   { href: "/", label: "Beranda" },
@@ -75,22 +76,27 @@ export function SiteHeader() {
                   </Link>
                 );
               })}
+              <span className="ml-3">
+                <ThemeToggle />
+              </span>
               <a
                 href="https://github.com/bryankwandou"
                 target="_blank"
                 rel="noreferrer"
-                className="ml-3 rounded-full px-4 py-2 text-[13.5px] font-medium transition-transform hover:-translate-y-px"
+                className="ml-2 rounded-full px-4 py-2 text-[13.5px] font-medium transition-transform hover:-translate-y-px"
                 style={{ background: "var(--accent)", color: "#0b0b0d" }}
               >
                 GitHub
               </a>
             </nav>
 
-            <button
+            <div className="flex items-center gap-2 md:hidden">
+              <ThemeToggle />
+              <button
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? "Tutup menu" : "Buka menu"}
               aria-expanded={open}
-              className="flex h-10 w-10 items-center justify-center rounded-full md:hidden"
+              className="flex h-9 w-9 items-center justify-center rounded-full"
               style={{ border: "1px solid var(--line-strong)" }}
             >
               <span className="relative block h-3 w-4">
@@ -110,7 +116,8 @@ export function SiteHeader() {
                   style={{ background: "var(--text)" }}
                 />
               </span>
-            </button>
+              </button>
+            </div>
           </div>
         </div>
       </motion.header>
