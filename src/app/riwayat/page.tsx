@@ -103,12 +103,14 @@ export default function RiwayatPage() {
           Angka yang bisa dipastikan, dan yang belum
         </h2>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { v: audience.instagramFollowers?.toLocaleString("id-ID"), l: "Pengikut Instagram", s: "@bryan_kwandou", ok: true },
-            { v: audience.instagramFollowing?.toLocaleString("id-ID"), l: "Mengikuti", s: "@bryan_kwandou", ok: true },
-            { v: "17.600", l: "Jangkauan komunitas", s: "@lensanuswantara", ok: true },
+            { v: audience.igGamingFollowers.toLocaleString("id-ID"), l: "Pengikut Instagram", s: "@nayrbryan_gaming", ok: true },
+            { v: audience.igPersonalFollowers.toLocaleString("id-ID"), l: "Pengikut Instagram", s: "@bryan_kwandou", ok: true },
+            { v: audience.communityFollowers.toLocaleString("id-ID"), l: "Jangkauan komunitas", s: "@lensanuswantara", ok: true },
+            { v: audience.ownPosts.toLocaleString("id-ID"), l: "Unggahan sendiri", s: "dua akun digabung", ok: true },
             { v: null, l: "Pengikut TikTok", s: "@vinbryyt", ok: false },
+            { v: null, l: "Kanal YouTube", s: "tidak ditemukan", ok: false },
           ].map((k) => (
             <Reveal key={k.l}>
               <div
@@ -128,10 +130,12 @@ export default function RiwayatPage() {
         </div>
 
         <p className="mt-8 max-w-2xl text-[13.5px] leading-relaxed" style={{ color: "var(--text-faint)" }}>
-          TikTok tidak membuka jumlah pengikut ke pembaca otomatis, dan kanal YouTube dengan handel{" "}
-          <code className="font-mono">@vinbryyt</code> maupun <code className="font-mono">@VinBryYT</code>{" "}
-          mengembalikan 404 saat diperiksa pada 6 Agustus 2026. Angkanya sengaja dikosongkan sampai ada
-          data yang bisa dipertanggungjawabkan.
+          Angka Instagram terbaca dari tag pratinjau tautan di tiap halaman profil, diambil pada 7
+          Agustus 2026. TikTok tidak membukanya: halaman profil menyajikan CAPTCHA kepada pembaca
+          otomatis, sehingga jumlah pengikutnya hanya bisa diisi manual dari dasbor kreator. Kanal
+          YouTube dengan handel <code className="font-mono">@vinbryyt</code> maupun{" "}
+          <code className="font-mono">@VinBryYT</code> sama-sama mengembalikan 404. Dua kolom itu
+          dikosongkan sampai ada data yang bisa dipertanggungjawabkan.
         </p>
       </section>
 

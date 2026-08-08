@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Hero } from "@/components/Hero";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Reveal, Stagger, StaggerItem, Counter, Parallax, SplitHeading } from "@/components/motion";
+import { Presence } from "@/components/Presence";
 import { featured } from "@/data/projects";
 import { disciplines } from "@/data/timeline";
 import { profile, audience } from "@/data/profile";
@@ -76,7 +77,7 @@ export default function Home() {
             { n: 20, suffix: "+", label: "Produk dengan tautan live", note: "Terverifikasi" },
             { n: 9, suffix: "", label: "Sertifikasi terdaftar", note: "2023 sampai 2024" },
             {
-              n: Math.round((audience.communityReach ?? 0) / 100) / 10,
+              n: Math.round(audience.communityFollowers / 100) / 10,
               suffix: " rb",
               label: "Jangkauan komunitas foto",
               note: "@lensanuswantara",
@@ -174,6 +175,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Presence />
 
       {/* ---------------------------------------------------------------- */}
       {/*  Ajakan                                                            */}

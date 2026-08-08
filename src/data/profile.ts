@@ -20,9 +20,11 @@ export const profile = {
     "Membangun perangkat lunak yang bisa dibuktikan, dan merekam prosesnya di depan kamera.",
   summary:
     "Nama panggung VinBryYT lahir dari dua penggal nama sendiri — Vincentius dan Bryan. " +
-    "Sehari-hari saya menulis kode: aplikasi mobile, antarmuka web, dan infrastruktur pembayaran " +
-    "di atas Solana. Di luar editor, saya memotret dan membuat video. Dua kebiasaan itu tidak " +
-    "terpisah: keduanya soal menyusun bukti bahwa sesuatu benar-benar terjadi.",
+    "Kebiasaan menerbitkan sesuatu sudah berjalan sejak 2010; lima ribu unggahan lebih dulu ada " +
+    "daripada baris kode pertama yang layak ditunjukkan. Sekarang keduanya berjalan berdampingan: " +
+    "aplikasi mobile, antarmuka web, dan rel pembayaran di atas Solana pada siang hari; kamera " +
+    "ketika cahayanya sedang bagus. Keduanya soal hal yang sama — menyusun bukti bahwa sesuatu " +
+    "benar-benar terjadi.",
   roles: [
     "Full-Stack & Web3 Developer",
     "Creator",
@@ -40,29 +42,39 @@ export type SocialLink = {
   handle: string;
   href: string;
   note?: string;
+  /** Angka publik yang terbaca dari tag pratinjau halaman profil. */
+  metrics?: { followers?: number; following?: number; posts?: number };
   verified: boolean;
 };
 
+/**
+ * Angka di bawah dibaca dari tag `og:description` tiap halaman profil memakai
+ * peramban tanpa jendela, pada 7 Agustus 2026. Instagram menaruh ringkasan
+ * pengikut, mengikuti, dan jumlah unggahan di tag itu supaya pratinjau tautan
+ * bisa terbentuk, sehingga terbaca tanpa perlu masuk akun.
+ */
 export const socials: SocialLink[] = [
   {
     label: "TikTok",
     handle: "@vinbryyt",
     href: "https://www.tiktok.com/@vinbryyt",
-    note: "Akun utama. Nama tampilan VinBryYT.",
+    note: "Akun utama, nama tampilan VinBryYT.",
     verified: true, // dikonfirmasi lewat endpoint oEmbed TikTok
-  },
-  {
-    label: "Instagram",
-    handle: "@bryan_kwandou",
-    href: "https://www.instagram.com/bryan_kwandou/",
-    note: "Akun pribadi.",
-    verified: true,
   },
   {
     label: "Instagram",
     handle: "@nayrbryan_gaming",
     href: "https://www.instagram.com/nayrbryan_gaming/",
-    note: "Akun gaming.",
+    note: "Akun terbesar. Psikologi dagang, disiplin, dan pengelolaan risiko.",
+    metrics: { followers: 1516, following: 2290, posts: 3863 },
+    verified: true,
+  },
+  {
+    label: "Instagram",
+    handle: "@bryan_kwandou",
+    href: "https://www.instagram.com/bryan_kwandou/",
+    note: "Akun pribadi. Catatan kerja, sertifikat, dan kegiatan komunitas.",
+    metrics: { followers: 368, following: 493, posts: 1174 },
     verified: true,
   },
   {
@@ -70,13 +82,15 @@ export const socials: SocialLink[] = [
     handle: "@bryankwandou",
     href: "https://github.com/bryankwandou",
     note: "104 repositori publik.",
+    metrics: { posts: 104 },
     verified: true,
   },
   {
     label: "Komunitas",
     handle: "@lensanuswantara",
     href: "https://www.instagram.com/lensanuswantara/",
-    note: "Komunitas fotografi Nusantara, 17.6 ribu pengikut.",
+    note: "Komunitas fotografi Nusantara yang ikut dibina.",
+    metrics: { followers: 18000, following: 20, posts: 2906 },
     verified: true,
   },
   {
@@ -87,23 +101,27 @@ export const socials: SocialLink[] = [
   },
 ];
 
-/**
- * VERIFY — angka audiens.
- * TikTok dan Instagram tidak mengizinkan pembacaan otomatis atas jumlah
- * pengikut. Isi manual dari dashboard masing-masing platform.
- */
 export const audience = {
-  tiktokFollowers: null as number | null, // VERIFY
-  tiktokLikes: null as number | null, // VERIFY
-  instagramFollowers: 368, // sumber: halaman profil @bryan_kwandou
-  instagramFollowing: 475, // sumber: halaman profil @bryan_kwandou
-  communityReach: 17600, // sumber: @lensanuswantara
-  youtube: null as string | null, // VERIFY — handle @vinbryyt dan @VinBryYT sama-sama 404
+  /** Belum terbaca: TikTok menyajikan CAPTCHA kepada pembaca otomatis. */
+  tiktokFollowers: null as number | null,
+  tiktokLikes: null as number | null,
+  /** Belum terbaca: handel @vinbryyt maupun @VinBryYT mengembalikan 404. */
+  youtube: null as string | null,
+
+  igGamingFollowers: 1516,
+  igPersonalFollowers: 368,
+  communityFollowers: 18000,
+
+  /** Unggahan yang diterbitkan sendiri, dua akun Instagram digabung. */
+  ownPosts: 3863 + 1174,
+  communityPosts: 2906,
 };
 
-export const stats = [
-  { value: "104", label: "Repositori publik", source: "GitHub API" },
-  { value: "20+", label: "Produk dengan tautan live", source: "GitHub API" },
-  { value: "17,6 rb", label: "Jangkauan komunitas foto", source: "Instagram" },
-  { value: "2018", label: "Mulai bikin konten", source: "VERIFY" },
-];
+/**
+ * Bio akun @nayrbryan_gaming, disalin apa adanya. Baris penutupnya menyebut
+ * tahun mulai yang lebih awal daripada perkiraan sebelumnya, jadi dipakai
+ * sebagai kutipan langsung — bukan diringkas ulang.
+ */
+export const gamingBio =
+  "Trading psychology & discipline / Market insights | Risk management / " +
+  "Build consistency, not hype / Content creator since 2010";

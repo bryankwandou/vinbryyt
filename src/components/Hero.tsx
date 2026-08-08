@@ -80,7 +80,8 @@ export function Hero() {
               >
                 VinBryYT
               </span>{" "}
-              — dua penggal dari nama sendiri, dipakai sejak masih memegang kamera pinjaman.
+              — dua penggal dari nama sendiri. Menerbitkan sesuatu ke publik sejak 2010,
+              menulis kode yang layak dibuka sejak 2023.
             </motion.p>
 
             <motion.div

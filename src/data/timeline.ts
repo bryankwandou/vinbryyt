@@ -14,14 +14,34 @@ export type Chapter = {
 
 export const chapters: Chapter[] = [
   {
-    year: "2018",
-    title: "Kamera pertama, penonton pertama",
+    year: "2010",
+    title: "Mulai menerbitkan",
     body:
-      "Awal mula membuat konten dengan nama VinBryYT — dua penggal dari Vincentius dan Bryan. " +
-      "Tanggal pastinya belum dapat dikonfirmasi lewat arsip publik; TikTok tidak membuka tanggal " +
-      "pendaftaran akun ke mesin pembaca.",
+      "Bio akun @nayrbryan_gaming menutup dengan satu baris: content creator since 2010. " +
+      "Itu titik awal paling tua yang tercatat di arsip terbuka mana pun — jauh sebelum ada " +
+      "repositori untuk ditunjukkan, dan jauh sebelum kata portofolio terasa relevan.",
+    confirmed: true,
+    source: "Bio Instagram @nayrbryan_gaming",
+  },
+  {
+    year: "2018",
+    title: "Nama VinBryYT dipakai",
+    body:
+      "Dua penggal dari Vincentius dan Bryan, disatukan jadi satu nama panggung. Tahun pastinya " +
+      "belum dapat dicocokkan ke arsip terbuka: TikTok tidak membuka tanggal pendaftaran akun " +
+      "kepada pembaca otomatis, dan halaman profilnya menyajikan CAPTCHA.",
     confirmed: false,
     source: "Perlu konfirmasi dari pemilik akun",
+  },
+  {
+    year: "2010—2026",
+    title: "Lima ribu unggahan",
+    body:
+      "Dua akun Instagram mengumpulkan 3.863 dan 1.174 unggahan; komunitas fotografi yang ikut " +
+      "dibina menambah 2.906 lagi. Kebiasaan menerbitkan sesuatu secara berkala inilah yang " +
+      "belakangan terbawa ke cara bekerja dengan kode.",
+    confirmed: true,
+    source: "Tag pratinjau halaman profil Instagram, 7 Agustus 2026",
   },
   {
     year: "2023",
