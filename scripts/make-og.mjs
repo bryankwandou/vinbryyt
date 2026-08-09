@@ -64,7 +64,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" 
     Rel pembayaran di atas Solana, perangkat operasional, dan aplikasi mobile.
   </text>
   <text x="72" y="514" font-family="Segoe UI, Arial, sans-serif" font-size="25" fill="#b9b3a7">
-    Menerbitkan sejak 2010. Seratus empat repositori terbuka untuk diperiksa.
+    Enam puluh ribu penonton sejak 2018. Seratus empat repositori terbuka.
   </text>
 
   <rect x="72" y="560" width="184" height="4" rx="2" fill="#FF7A3D"/>

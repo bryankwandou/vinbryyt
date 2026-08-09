@@ -73,9 +73,9 @@ export default function Home() {
       <section className="rule">
         <div className="mx-auto grid max-w-6xl gap-px px-5 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
           {[
+            { n: 60.3, suffix: " rb", label: "Pengikut TikTok", note: "@vinbryyt, sejak 2018" },
             { n: 104, suffix: "", label: "Repositori publik", note: "GitHub API" },
             { n: 20, suffix: "+", label: "Produk dengan tautan live", note: "Terverifikasi" },
-            { n: 9, suffix: "", label: "Sertifikasi terdaftar", note: "2023 sampai 2024" },
             {
               n: Math.round(audience.communityFollowers / 100) / 10,
               suffix: " rb",

@@ -80,8 +80,8 @@ export function Hero() {
               >
                 VinBryYT
               </span>{" "}
-              — dua penggal dari nama sendiri. Menerbitkan sesuatu ke publik sejak 2010,
-              menulis kode yang layak dibuka sejak 2023.
+              — dua penggal dari nama sendiri, dipakai di depan enam puluh ribu penonton sejak
+              Agustus 2018. Menulis kode yang layak dibuka sejak 2023.
             </motion.p>
 
             <motion.div
@@ -159,9 +159,9 @@ export function Hero() {
               className="absolute -bottom-5 -left-5 rounded-xl px-4 py-3 backdrop-blur-md"
               style={{ border: "1px solid var(--line-strong)", background: "color-mix(in srgb, var(--surface) 88%, transparent)" }}
             >
-              <p className="text-[22px] font-semibold leading-none">104</p>
+              <p className="text-[22px] font-semibold leading-none">60,3 rb</p>
               <p className="mt-1 font-mono text-[9.5px] tracking-[0.14em]" style={{ color: "var(--text-faint)" }}>
-                REPO PUBLIK
+                PENGIKUT TIKTOK
               </p>
             </motion.div>
           </motion.div>

@@ -24,24 +24,52 @@ export const chapters: Chapter[] = [
     source: "Bio Instagram @nayrbryan_gaming",
   },
   {
-    year: "2018",
-    title: "Nama VinBryYT dipakai",
+    year: "1 Agustus 2018",
+    title: "Akun VinBryYT berdiri",
     body:
-      "Dua penggal dari Vincentius dan Bryan, disatukan jadi satu nama panggung. Tahun pastinya " +
-      "belum dapat dicocokkan ke arsip terbuka: TikTok tidak membuka tanggal pendaftaran akun " +
-      "kepada pembaca otomatis, dan halaman profilnya menyajikan CAPTCHA.",
-    confirmed: false,
-    source: "Perlu konfirmasi dari pemilik akun",
+      "TikTok mencatat tanggalnya sendiri: Est Aug 1, 2018. Namanya disusun dari dua penggal " +
+      "nama pemiliknya, Vincentius dan Bryan. Sampai hari ini akun itu mengumpulkan 60,3 ribu " +
+      "pengikut dan 38,9 ribu suka.",
+    confirmed: true,
+    source: "Widget embed kreator resmi TikTok",
+  },
+  {
+    year: "2019",
+    title: "Masuk Bigetron",
+    body:
+      "Bio TikTok membuka urutannya: BTR (2019). Babak esports dimulai di sini, dan sejak itu " +
+      "kamera bukan cuma alat merekam jalan-jalan — ia jadi bagian dari pekerjaan bertanding.",
+    confirmed: true,
+    source: "Bio TikTok @vinbryyt",
+  },
+  {
+    year: "2021",
+    title: "Pindah ke SRG",
+    body:
+      "Babak kedua dalam urutan yang sama. Dua tahun setelah BTR, dengan penonton yang sudah " +
+      "terbentuk dan kebiasaan menerbitkan yang sudah jalan sendiri.",
+    confirmed: true,
+    source: "Bio TikTok @vinbryyt",
+  },
+  {
+    year: "2023",
+    title: "Berdiri sendiri lewat NNG",
+    body:
+      "NNG (2023-now) — nayrbryanGaming, bendera sendiri. Tahun yang sama dengan gelombang " +
+      "pertama sertifikasi teknis, jadi dua jalur itu berjalan berdampingan sejak awal.",
+    confirmed: true,
+    source: "Bio TikTok @vinbryyt",
   },
   {
     year: "2010—2026",
     title: "Lima ribu unggahan",
     body:
       "Dua akun Instagram mengumpulkan 3.863 dan 1.174 unggahan; komunitas fotografi yang ikut " +
-      "dibina menambah 2.906 lagi. Kebiasaan menerbitkan sesuatu secara berkala inilah yang " +
-      "belakangan terbawa ke cara bekerja dengan kode.",
+      "dibina menambah 2.906 lagi. Di TikTok, tiga unggahan teratas menembus 175,9 ribu, 101,9 " +
+      "ribu, dan 46,5 ribu tontonan. Kebiasaan menerbitkan secara berkala inilah yang belakangan " +
+      "terbawa ke cara bekerja dengan kode.",
     confirmed: true,
-    source: "Tag pratinjau halaman profil Instagram, 7 Agustus 2026",
+    source: "Tag pratinjau Instagram dan widget embed TikTok",
   },
   {
     year: "2023",

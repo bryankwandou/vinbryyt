@@ -22,8 +22,11 @@ pada 6 Agustus 2026:
 
 - **GitHub REST API** (`/users/bryankwandou`, `/users/bryankwandou/repos`) — nama,
   domisili, bio, 104 repositori beserta deskripsi, bahasa, dan tautan live.
-- **Endpoint oEmbed TikTok** — memastikan akun `@vinbryyt` ada dan nama tampilannya
-  `VinBryYT`.
+- **Widget embed kreator TikTok** — kanal penyematan resmi yang disediakan TikTok
+  untuk dipasang di situs luar. Merendernya di peramban memberi jumlah pengikut
+  (60,3 rb), suka (38,9 rb), tanggal berdiri (1 Agustus 2018), bio, dan tontonan
+  tiga unggahan teratas. Halaman profil biasa menolak pembaca otomatis; widget ini
+  tidak, karena memang dirancang untuk dibaca pihak luar.
 - **Halaman profil Instagram** `@bryan_kwandou` dan `@lensanuswantara` — bio, jumlah
   pengikut, sorotan cerita.
 - **nayrbryangaming.vercel.app** — nama lengkap, alamat surel, daftar sertifikasi,
@@ -31,9 +34,8 @@ pada 6 Agustus 2026:
 
 Yang **tidak** berhasil diambil dan karenanya dikosongkan, bukan ditebak:
 
-- Jumlah pengikut dan suka di TikTok — halaman profilnya menolak pembaca otomatis.
 - Kanal YouTube — handel `@vinbryyt` maupun `@VinBryYT` sama-sama mengembalikan 404.
-- Tanggal pasti mulai membuat konten pada 2018 — tidak ada arsip terbuka yang memuatnya.
+  Kalau kanalnya memakai alamat lain, isikan sendiri.
 
 Butir semacam itu ditandai di berkas data (`VERIFY`) dan tampil di layar dengan label
 "belum terkonfirmasi". Ubah nilainya di `src/data/` begitu angka resminya tersedia;

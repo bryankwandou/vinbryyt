@@ -1,9 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
 import { Reveal, Stagger, StaggerItem, Counter } from "./motion";
-import { socials, audience, gamingBio } from "@/data/profile";
+import { socials, audience, gamingBio, tiktok } from "@/data/profile";
 
 function ringkas(n: number) {
   if (n >= 1000) return { angka: Math.round(n / 100) / 10, akhiran: " rb" };
@@ -63,13 +62,58 @@ export function Presence() {
         <div>
           <Reveal>
             <h2 className="max-w-xl text-[clamp(1.9rem,4.2vw,3rem)] font-semibold leading-[1.06] tracking-[-0.03em]">
-              Lima ribu unggahan sebelum baris kode pertama
+              Enam puluh ribu penonton sebelum baris kode pertama
             </h2>
             <p className="mt-6 max-w-lg text-[15.5px] leading-relaxed" style={{ color: "var(--text-dim)" }}>
-              Kebiasaan menerbitkan sesuatu tiap hari terbentuk jauh sebelum ada repositori
-              untuk dipamerkan. Angka di bawah dibaca langsung dari tag pratinjau masing-masing
-              halaman profil, bukan diketik manual.
+              Akun TikTok berdiri {tiktok.established} dan sejak itu tidak pernah benar-benar
+              berhenti. Angka di bawah dibaca langsung dari kanal resmi masing-masing platform,
+              bukan diketik ulang dari ingatan.
             </p>
+          </Reveal>
+
+          <Reveal delay={0.08}>
+            <div
+              className="mt-8 overflow-hidden rounded-xl"
+              style={{ border: "1px solid var(--line-strong)" }}
+            >
+              <div className="grid grid-cols-3">
+                {[
+                  { v: tiktok.followersLabel, l: "Pengikut" },
+                  { v: tiktok.likesLabel, l: "Suka" },
+                  { v: tiktok.following.toString(), l: "Mengikuti" },
+                ].map((k, i) => (
+                  <div
+                    key={k.l}
+                    className="p-5"
+                    style={{ borderLeft: i ? "1px solid var(--line)" : undefined }}
+                  >
+                    <p className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-none tracking-[-0.035em]">
+                      {k.v}
+                    </p>
+                    <p className="mt-2.5 font-mono text-[9.5px] tracking-[0.13em]" style={{ color: "var(--text-faint)" }}>
+                      {k.l.toUpperCase()}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <div className="px-5 pb-5" style={{ borderTop: "1px solid var(--line)" }}>
+                <p className="mono-label mt-4">TikTok · @vinbryyt · berdiri {tiktok.established}</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {tiktok.topVideos.map((v, i) => (
+                    <a
+                      key={v.id}
+                      href={`https://www.tiktok.com/@vinbryyt/video/${v.id}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-full px-3 py-1.5 font-mono text-[11px] transition-colors hover:text-[var(--accent)]"
+                      style={{ border: "1px solid var(--line)", color: "var(--text-dim)" }}
+                    >
+                      #{i + 1} · {v.label} tontonan
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
           </Reveal>
 
           <Stagger className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -150,10 +194,9 @@ export function Presence() {
               <TikTokEmbed />
             </div>
             <p className="mt-4 text-[13px] leading-relaxed" style={{ color: "var(--text-faint)" }}>
-              Kartu di atas datang dari TikTok sendiri lewat oEmbed, jadi isinya selalu ikut
-              berubah bila profilnya diperbarui. Jumlah pengikut TikTok tidak dicantumkan di
-              tempat lain pada situs ini karena halaman profilnya menolak pembaca otomatis —
-              yang tampil hanya yang bisa dipertanggungjawabkan.
+              Kartu di atas datang dari TikTok sendiri lewat oEmbed, jadi isinya ikut berubah
+              begitu profilnya diperbarui — termasuk angka yang tertulis di sebelah kiri.
+              Bio akunnya berbunyi: &ldquo;{tiktok.bio}&rdquo;.
             </p>
           </Reveal>
 

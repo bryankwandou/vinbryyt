@@ -20,8 +20,9 @@ export const profile = {
     "Membangun perangkat lunak yang bisa dibuktikan, dan merekam prosesnya di depan kamera.",
   summary:
     "Nama panggung VinBryYT lahir dari dua penggal nama sendiri — Vincentius dan Bryan. " +
-    "Kebiasaan menerbitkan sesuatu sudah berjalan sejak 2010; lima ribu unggahan lebih dulu ada " +
-    "daripada baris kode pertama yang layak ditunjukkan. Sekarang keduanya berjalan berdampingan: " +
+    "Akun TikTok-nya berdiri 1 Agustus 2018 dan kini dibaca enam puluh ribu orang; kebiasaan " +
+    "menerbitkan sendiri sudah jalan sejak 2010. Penonton lebih dulu ada daripada baris kode " +
+    "pertama yang layak ditunjukkan. Sekarang keduanya berjalan berdampingan: " +
     "aplikasi mobile, antarmuka web, dan rel pembayaran di atas Solana pada siang hari; kamera " +
     "ketika cahayanya sedang bagus. Keduanya soal hal yang sama — menyusun bukti bahwa sesuatu " +
     "benar-benar terjadi.",
@@ -58,8 +59,9 @@ export const socials: SocialLink[] = [
     label: "TikTok",
     handle: "@vinbryyt",
     href: "https://www.tiktok.com/@vinbryyt",
-    note: "Akun utama, nama tampilan VinBryYT.",
-    verified: true, // dikonfirmasi lewat endpoint oEmbed TikTok
+    note: "Akun utama, berdiri 1 Agustus 2018.",
+    metrics: { followers: 60300, following: 122 },
+    verified: true, // angka dibaca dari widget embed kreator resmi TikTok
   },
   {
     label: "Instagram",
@@ -101,10 +103,33 @@ export const socials: SocialLink[] = [
   },
 ];
 
+/**
+ * Angka TikTok dibaca dari widget embed kreator resmi — kanal penyematan yang
+ * memang disediakan TikTok untuk dipasang di situs luar. Halaman profil biasa
+ * menolak pembaca otomatis, tapi widget ini menyajikan datanya secara terbuka.
+ * Diambil 8 Agustus 2026.
+ */
+export const tiktok = {
+  followers: 60300,
+  followersLabel: "60,3 rb",
+  likes: 38900,
+  likesLabel: "38,9 rb",
+  following: 122,
+  /** Tanggal berdiri menurut TikTok sendiri. */
+  established: "1 Agustus 2018",
+  /** Bio akun, disalin apa adanya. */
+  bio: "BTR(2019), SRG(2021), NNG(2023-now) Thanks for 10.8M Subs",
+  /** Tiga unggahan teratas beserta jumlah tontonannya. */
+  topVideos: [
+    { id: "7435665934976699655", views: 175900, label: "175,9 rb" },
+    { id: "7432695983647034632", views: 101900, label: "101,9 rb" },
+    { id: "7432698578037984519", views: 46500, label: "46,5 rb" },
+  ],
+};
+
 export const audience = {
-  /** Belum terbaca: TikTok menyajikan CAPTCHA kepada pembaca otomatis. */
-  tiktokFollowers: null as number | null,
-  tiktokLikes: null as number | null,
+  tiktokFollowers: 60300 as number | null,
+  tiktokLikes: 38900 as number | null,
   /** Belum terbaca: handel @vinbryyt maupun @VinBryYT mengembalikan 404. */
   youtube: null as string | null,
 

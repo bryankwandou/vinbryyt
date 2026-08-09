@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Reveal, SplitHeading, Parallax } from "@/components/motion";
 import { TimelineRail } from "@/components/TimelineRail";
 import { certifications } from "@/data/timeline";
-import { profile, audience } from "@/data/profile";
+import { profile, audience, tiktok } from "@/data/profile";
 
 export const metadata: Metadata = {
   title: "Riwayat",
@@ -105,11 +105,13 @@ export default function RiwayatPage() {
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {[
+            { v: tiktok.followersLabel, l: "Pengikut TikTok", s: "@vinbryyt", ok: true },
+            { v: tiktok.likesLabel, l: "Suka TikTok", s: "@vinbryyt", ok: true },
             { v: audience.igGamingFollowers.toLocaleString("id-ID"), l: "Pengikut Instagram", s: "@nayrbryan_gaming", ok: true },
             { v: audience.igPersonalFollowers.toLocaleString("id-ID"), l: "Pengikut Instagram", s: "@bryan_kwandou", ok: true },
             { v: audience.communityFollowers.toLocaleString("id-ID"), l: "Jangkauan komunitas", s: "@lensanuswantara", ok: true },
             { v: audience.ownPosts.toLocaleString("id-ID"), l: "Unggahan sendiri", s: "dua akun digabung", ok: true },
-            { v: null, l: "Pengikut TikTok", s: "@vinbryyt", ok: false },
+            { v: "175,9 rb", l: "Tontonan terbanyak", s: "satu unggahan TikTok", ok: true },
             { v: null, l: "Kanal YouTube", s: "tidak ditemukan", ok: false },
           ].map((k) => (
             <Reveal key={k.l}>
@@ -130,12 +132,12 @@ export default function RiwayatPage() {
         </div>
 
         <p className="mt-8 max-w-2xl text-[13.5px] leading-relaxed" style={{ color: "var(--text-faint)" }}>
-          Angka Instagram terbaca dari tag pratinjau tautan di tiap halaman profil, diambil pada 7
-          Agustus 2026. TikTok tidak membukanya: halaman profil menyajikan CAPTCHA kepada pembaca
-          otomatis, sehingga jumlah pengikutnya hanya bisa diisi manual dari dasbor kreator. Kanal
-          YouTube dengan handel <code className="font-mono">@vinbryyt</code> maupun{" "}
-          <code className="font-mono">@VinBryYT</code> sama-sama mengembalikan 404. Dua kolom itu
-          dikosongkan sampai ada data yang bisa dipertanggungjawabkan.
+          Angka Instagram terbaca dari tag pratinjau tautan di tiap halaman profil. Angka TikTok
+          berasal dari widget embed kreator resmi — kanal penyematan yang disediakan TikTok untuk
+          dipasang di situs luar, sehingga datanya terbuka tanpa perlu masuk akun. Keduanya diambil
+          pada 8 Agustus 2026. Yang masih kosong hanya satu: kanal YouTube dengan handel{" "}
+          <code className="font-mono">@vinbryyt</code> maupun <code className="font-mono">@VinBryYT</code>{" "}
+          sama-sama mengembalikan 404, jadi kolomnya dibiarkan bertanda sampai ada alamat yang benar.
         </p>
       </section>
 
