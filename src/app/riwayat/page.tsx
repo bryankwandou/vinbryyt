@@ -112,7 +112,7 @@ export default function RiwayatPage() {
             { v: audience.communityFollowers.toLocaleString("id-ID"), l: "Jangkauan komunitas", s: "@lensanuswantara", ok: true },
             { v: audience.ownPosts.toLocaleString("id-ID"), l: "Unggahan sendiri", s: "dua akun digabung", ok: true },
             { v: "175,9 rb", l: "Tontonan terbanyak", s: "satu unggahan TikTok", ok: true },
-            { v: null, l: "Kanal YouTube", s: "tidak ditemukan", ok: false },
+            { v: null, l: "Kanal YouTube", s: "ditutup, tanpa arsip", ok: false },
           ].map((k) => (
             <Reveal key={k.l}>
               <div
@@ -135,9 +135,11 @@ export default function RiwayatPage() {
           Angka Instagram terbaca dari tag pratinjau tautan di tiap halaman profil. Angka TikTok
           berasal dari widget embed kreator resmi — kanal penyematan yang disediakan TikTok untuk
           dipasang di situs luar, sehingga datanya terbuka tanpa perlu masuk akun. Keduanya diambil
-          pada 8 Agustus 2026. Yang masih kosong hanya satu: kanal YouTube dengan handel{" "}
-          <code className="font-mono">@vinbryyt</code> maupun <code className="font-mono">@VinBryYT</code>{" "}
-          sama-sama mengembalikan 404, jadi kolomnya dibiarkan bertanda sampai ada alamat yang benar.
+          pada 8 Agustus 2026. Yang tersisa kosong hanya satu: kanal YouTube. Handel{" "}
+          <code className="font-mono">@vinbryyt</code> dan <code className="font-mono">@VinBryYT</code>{" "}
+          sama-sama mengembalikan 404 karena kanalnya sudah ditutup platform. Wayback Machine,
+          SocialBlade, dan mesin pencari tidak menyimpan satu pun rekaman, jadi tidak ada angka yang
+          bisa dipulihkan — kolomnya sengaja dibiarkan bertanda, bukan diisi perkiraan.
         </p>
       </section>
 

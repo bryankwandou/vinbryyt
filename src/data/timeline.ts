@@ -61,6 +61,18 @@ export const chapters: Chapter[] = [
     source: "Bio TikTok @vinbryyt",
   },
   {
+    year: "Tanggal belum dipastikan",
+    title: "Kanal YouTube hilang",
+    body:
+      "Kanal YouTube-nya ditutup pihak platform dan tidak menyisakan apa pun yang bisa " +
+      "diselamatkan. Pemeriksaan ke Wayback Machine dengan lima pola alamat, pencarian luas " +
+      "di seluruh arsipnya, SocialBlade, dan mesin pencari sama-sama tidak menemukan satu pun " +
+      "rekaman. Bagian ini dicatat justru karena kosong: sebuah arsip yang tidak sempat dibuat " +
+      "lebih jujur ditulis daripada dihapus dari cerita.",
+    confirmed: false,
+    source: "Keterangan pemilik akun; nol hasil pada seluruh arsip yang diperiksa",
+  },
+  {
     year: "2010—2026",
     title: "Lima ribu unggahan",
     body:
