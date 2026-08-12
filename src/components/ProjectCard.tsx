@@ -1,12 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { TiltCard } from "./motion";
 import type { Project } from "@/data/projects";
 
 export function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
     <TiltCard
-      className="group relative flex h-full flex-col overflow-hidden rounded-2xl p-6 transition-colors duration-300"
+      className="group relative flex h-full flex-col overflow-hidden rounded-2xl transition-colors duration-300"
       max={5}
     >
       <span
@@ -16,10 +17,31 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
       />
       <span
         aria-hidden
-        className="pointer-events-none absolute inset-x-6 top-0 h-px opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        className="pointer-events-none absolute inset-x-6 top-0 z-10 h-px opacity-0 transition-opacity duration-500 group-hover:opacity-100"
         style={{ background: "linear-gradient(90deg, transparent, var(--accent), transparent)" }}
       />
 
+      {/* Kartu pratinjau yang dirender GitHub untuk repositori ini */}
+      <div className="relative m-[1px] mb-0 aspect-[2/1] overflow-hidden rounded-t-2xl">
+        <Image
+          src={`/proyek/${project.slug}.webp`}
+          alt={`Pratinjau repositori ${project.name}`}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+          loading={index < 3 ? "eager" : "lazy"}
+        />
+        <span
+          aria-hidden
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to bottom, transparent 40%, color-mix(in srgb, var(--surface) 92%, transparent))",
+          }}
+        />
+      </div>
+
+      <div className="relative flex flex-1 flex-col p-6 pt-4">
       <div className="relative flex items-start justify-between gap-4">
         <div>
           <p className="font-mono text-[10.5px] tracking-[0.16em]" style={{ color: "var(--text-faint)" }}>
@@ -68,6 +90,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
             </svg>
           </a>
         )}
+      </div>
       </div>
     </TiltCard>
   );
