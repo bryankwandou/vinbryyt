@@ -10,6 +10,7 @@ import { ThemeToggle } from "./ThemeToggle";
 const nav = [
   { href: "/", label: "Beranda" },
   { href: "/kerja", label: "Kerja" },
+  { href: "/galeri", label: "Galeri" },
   { href: "/riwayat", label: "Riwayat" },
   { href: "/kontak", label: "Kontak" },
 ];

@@ -9,6 +9,10 @@ npm-debug.log*
 !.env.example
 .vercel
 next-env.d.ts
+
+# foto mentah galeri; yang disimpan hanya hasil olahannya di kecil/ dan besar/
+public/galeri/masuk/*
+!public/galeri/masuk/CARA-PAKAI.md
 tsconfig.tsbuildinfo
 
 .vercel
