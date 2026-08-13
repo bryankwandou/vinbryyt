@@ -40,9 +40,9 @@ function Chapter({ c, i }: { c: (typeof chapters)[number]; i: number }) {
           )}
         </div>
 
-        <h3 className="mt-3 text-[clamp(1.35rem,2.6vw,1.9rem)] font-semibold leading-tight tracking-[-0.025em]">
+        <h2 className="mt-3 text-[clamp(1.35rem,2.6vw,1.9rem)] font-semibold leading-tight tracking-[-0.025em]">
           {c.title}
-        </h3>
+        </h2>
         <p className="mt-3.5 max-w-2xl text-[15px] leading-relaxed" style={{ color: "var(--text-dim)" }}>
           {c.body}
         </p>

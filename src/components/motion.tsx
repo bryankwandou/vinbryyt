@@ -105,7 +105,16 @@ export function SplitHeading({
   const words = text.split(" ");
   const Tag = motion[as];
 
-  if (reduced) {
+  /*
+    Server tidak tahu setelan gerak pengunjung, jadi lukisan pertama di sisi
+    klien harus persis sama dengan keluaran server — kalau tidak, React
+    membatalkan hidrasi. Karena itu bentuk sederhana dipakai lebih dulu, dan
+    versi beranimasinya baru menyusul setelah komponen terpasang.
+  */
+  const [terpasang, setTerpasang] = useState(false);
+  useEffect(() => setTerpasang(true), []);
+
+  if (reduced || !terpasang) {
     return <Tag className={className}>{text}</Tag>;
   }
 

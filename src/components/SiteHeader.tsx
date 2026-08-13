@@ -97,7 +97,7 @@ export function SiteHeader() {
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? "Tutup menu" : "Buka menu"}
               aria-expanded={open}
-              className="flex h-9 w-9 items-center justify-center rounded-full"
+              className="flex h-11 w-11 items-center justify-center rounded-full"
               style={{ border: "1px solid var(--line-strong)" }}
             >
               <span className="relative block h-3 w-4">

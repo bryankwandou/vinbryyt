@@ -46,16 +46,19 @@ export function Hero() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15, ease: EASE }}
-          className="mb-8 flex items-center gap-3"
+          className="mb-8 flex items-start gap-3"
         >
-          <span className="relative flex h-2 w-2">
+          {/* titik dijaga sejajar dengan baris pertama meski labelnya membungkus */}
+          <span className="relative mt-[5px] flex h-2 w-2 shrink-0">
             <span
               className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-70"
               style={{ background: "var(--accent)" }}
             />
             <span className="relative inline-flex h-2 w-2 rounded-full" style={{ background: "var(--accent)" }} />
           </span>
-          <span className="mono-label">Terbuka untuk kerja sama · {profile.location}</span>
+          <span className="mono-label leading-[1.5]">
+            Terbuka untuk kerja sama · {profile.location}
+          </span>
         </motion.div>
 
         <div className="grid items-end gap-12 lg:grid-cols-[1.55fr_1fr]">

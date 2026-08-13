@@ -109,6 +109,25 @@ body {
   border-top: 1px solid var(--line);
 }
 
+/*
+  Kartu pratinjau yang dirender GitHub selalu berlatar putih. Di tema gelap
+  itu menyilaukan, jadi kecerahannya diturunkan dan warnanya diredam sampai
+  gambar terasa seperti tekstur, bukan tempelan. Saat kursor lewat, gambar
+  dikembalikan ke keadaan aslinya.
+*/
+.preview-img {
+  filter: brightness(0.58) saturate(0.72) contrast(1.06);
+}
+.group:hover .preview-img {
+  filter: brightness(0.95) saturate(1) contrast(1);
+}
+:root[data-theme="light"] .preview-img {
+  filter: brightness(0.98) saturate(0.9);
+}
+:root[data-theme="light"] .group:hover .preview-img {
+  filter: none;
+}
+
 .mono-label {
   font-family: var(--font-mono);
   font-size: 0.6875rem;

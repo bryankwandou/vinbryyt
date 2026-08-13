@@ -44,7 +44,7 @@ export function ThemeToggle() {
     <button
       onClick={flip}
       aria-label={mode === "dark" ? "Ganti ke tema terang" : "Ganti ke tema gelap"}
-      className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-full transition-colors"
+      className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-full transition-colors"
       style={{ border: "1px solid var(--line-strong)" }}
     >
       <AnimatePresence mode="wait" initial={false}>

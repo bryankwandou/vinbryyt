@@ -19,7 +19,7 @@ export function SiteFooter() {
 
           <div>
             <p className="mono-label">Halaman</p>
-            <ul className="mt-4 space-y-2.5 text-[14.5px]">
+            <ul className="mt-2 text-[14.5px]">
               {[
                 { href: "/", label: "Beranda" },
                 { href: "/kerja", label: "Kerja" },
@@ -28,7 +28,11 @@ export function SiteFooter() {
                 { href: "/kontak", label: "Kontak" },
               ].map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="link-underline" style={{ color: "var(--text-dim)" }}>
+                  <Link
+                    href={l.href}
+                    className="link-underline inline-block py-2"
+                    style={{ color: "var(--text-dim)" }}
+                  >
                     {l.label}
                   </Link>
                 </li>
@@ -38,14 +42,14 @@ export function SiteFooter() {
 
           <div>
             <p className="mono-label">Tempat lain</p>
-            <ul className="mt-4 space-y-2.5 text-[14.5px]">
+            <ul className="mt-2 text-[14.5px]">
               {socials.map((s) => (
                 <li key={s.href}>
                   <a
                     href={s.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="link-underline"
+                    className="link-underline inline-block py-2"
                     style={{ color: "var(--text-dim)" }}
                   >
                     {s.label} <span style={{ color: "var(--text-faint)" }}>{s.handle}</span>

@@ -28,15 +28,17 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
           alt={`Pratinjau repositori ${project.name}`}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+          className="preview-img object-cover transition-all duration-700 group-hover:scale-[1.04]"
           loading={index < 3 ? "eager" : "lazy"}
         />
+        {/* Kartu bawaan GitHub berlatar terang; diredam supaya menyatu dengan
+            bidang gelap, lalu dikembalikan penuh saat kursor lewat. */}
         <span
           aria-hidden
-          className="absolute inset-0"
+          className="absolute inset-0 transition-opacity duration-700 group-hover:opacity-40"
           style={{
             background:
-              "linear-gradient(to bottom, transparent 40%, color-mix(in srgb, var(--surface) 92%, transparent))",
+              "linear-gradient(to bottom, color-mix(in srgb, var(--surface) 55%, transparent) 0%, color-mix(in srgb, var(--surface) 78%, transparent) 55%, var(--surface) 100%)",
           }}
         />
       </div>
@@ -47,7 +49,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
           <p className="font-mono text-[10.5px] tracking-[0.16em]" style={{ color: "var(--text-faint)" }}>
             {String(index + 1).padStart(2, "0")} · {project.language.toUpperCase()}
           </p>
-          <h3 className="mt-2 text-[19px] font-semibold tracking-tight">{project.name}</h3>
+          <h2 className="mt-2 text-[19px] font-semibold tracking-tight">{project.name}</h2>
         </div>
         {project.live && (
           <span
