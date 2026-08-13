@@ -30,7 +30,7 @@ export function SiteFooter() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="link-underline inline-block py-2"
+                    className="link-underline inline-block py-2.5"
                     style={{ color: "var(--text-dim)" }}
                   >
                     {l.label}
@@ -49,7 +49,7 @@ export function SiteFooter() {
                     href={s.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="link-underline inline-block py-2"
+                    className="link-underline inline-block py-2.5"
                     style={{ color: "var(--text-dim)" }}
                   >
                     {s.label} <span style={{ color: "var(--text-faint)" }}>{s.handle}</span>

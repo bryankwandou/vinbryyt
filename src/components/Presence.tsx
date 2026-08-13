@@ -135,7 +135,7 @@ export function Presence() {
                       href={`https://www.tiktok.com/@vinbryyt/video/${v.id}`}
                       target="_blank"
                       rel="noreferrer"
-                      className="rounded-full px-3 py-1.5 font-mono text-[11px] transition-colors hover:text-[var(--accent)]"
+                      className="rounded-full px-3.5 py-2.5 font-mono text-[11px] transition-colors hover:text-[var(--accent)]"
                       style={{ border: "1px solid var(--line)", color: "var(--text-dim)" }}
                     >
                       #{i + 1} · {v.label} tontonan

@@ -1,12 +1,13 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useSpring, useInView } from "framer-motion";
+import { motion, useScroll, useSpring, useInView, useReducedMotion } from "framer-motion";
 import { chapters } from "@/data/timeline";
 
 function Chapter({ c, i }: { c: (typeof chapters)[number]; i: number }) {
   const ref = useRef<HTMLLIElement>(null);
   const inView = useInView(ref, { once: true, margin: "-20% 0px -20% 0px" });
+  const reduced = useReducedMotion();
 
   return (
     <li ref={ref} className="relative pl-12 sm:pl-20">
@@ -15,14 +16,19 @@ function Chapter({ c, i }: { c: (typeof chapters)[number]; i: number }) {
         aria-hidden
         className="absolute left-[13px] top-[9px] block h-3 w-3 rounded-full sm:left-[29px]"
         style={{ background: "var(--page)", border: "2px solid var(--accent)" }}
-        initial={{ scale: 0 }}
+        initial={reduced ? false : { scale: 0 }}
         animate={inView ? { scale: 1 } : {}}
         transition={{ type: "spring", stiffness: 420, damping: 20, delay: 0.1 }}
       />
 
+      {/*
+        Babak yang belum masuk pandangan sempat digeser ke kanan. Pada layar
+        sempit geseran itu menambah lebar dokumen dan membuat halaman bisa
+        ditarik ke samping, jadi kini masuknya dari bawah.
+      */}
       <motion.div
-        initial={{ opacity: 0, x: 22 }}
-        animate={inView ? { opacity: 1, x: 0 } : {}}
+        initial={reduced ? false : { opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
         className="pb-16"
       >
@@ -62,7 +68,7 @@ export function TimelineRail() {
   const scaleY = useSpring(scrollYProgress, { stiffness: 110, damping: 28, restDelta: 0.001 });
 
   return (
-    <section className="rule">
+    <section className="rule" style={{ overflowX: "clip" }}>
       <div ref={ref} className="mx-auto max-w-6xl px-5 py-24 sm:px-8">
         <div className="relative">
           {/* rel latar */}

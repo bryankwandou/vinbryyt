@@ -68,7 +68,7 @@ export function WorkCatalog() {
                   <button
                     key={c.id}
                     onClick={() => setFilter(c.id)}
-                    className="relative rounded-full px-3.5 py-1.5 text-[13px] transition-colors"
+                    className="relative rounded-full px-4 py-2.5 text-[13px] transition-colors"
                     style={{ color: on ? "#0b0b0d" : "var(--text-dim)" }}
                   >
                     {on && (
@@ -95,7 +95,7 @@ export function WorkCatalog() {
               value={q}
               onChange={(e) => setQ(e.target.value)}
               placeholder="Cari..."
-              className="w-full rounded-full bg-transparent px-4 py-2 text-[13px] outline-none"
+              className="w-full rounded-full bg-transparent px-4 py-3 text-[13px] outline-none"
               style={{ border: "1px solid var(--line-strong)", color: "var(--text)" }}
             />
           </label>
