@@ -10,24 +10,53 @@ function ringkas(n: number) {
 }
 
 /**
- * Sematan profil kreator resmi dari TikTok. Berkas embed.js dimuat sekali,
- * lalu TikTok mengganti blockquote di bawah dengan kartu profil sungguhan.
- * Bila skripnya gagal termuat, blockquote-nya tetap menjadi tautan yang bisa
- * diklik, jadi tidak ada bagian yang kosong.
+ * Sematan profil kreator resmi dari TikTok.
+ *
+ * Skripnya sengaja baru dipanggil ketika bagian ini benar-benar mendekati
+ * layar. Sekali termuat, iframe milik TikTok terus berjalan dan tidak pernah
+ * membiarkan halaman benar-benar diam, jadi tidak ada gunanya menanggung
+ * beban itu sejak pengunjung baru membuka beranda.
+ *
+ * Bila skripnya gagal termuat, blockquote di bawah tetap berupa tautan yang
+ * bisa diklik, jadi tidak ada bagian yang kosong.
  */
 function TikTokEmbed() {
-  const done = useRef(false);
+  const wadah = useRef<HTMLDivElement>(null);
+  const sudah = useRef(false);
 
   useEffect(() => {
-    if (done.current) return;
-    done.current = true;
-    const s = document.createElement("script");
-    s.src = "https://www.tiktok.com/embed.js";
-    s.async = true;
-    document.body.appendChild(s);
+    const el = wadah.current;
+    if (!el) return;
+
+    const muat = () => {
+      if (sudah.current) return;
+      sudah.current = true;
+      const s = document.createElement("script");
+      s.src = "https://www.tiktok.com/embed.js";
+      s.async = true;
+      document.body.appendChild(s);
+    };
+
+    if (!("IntersectionObserver" in window)) {
+      muat();
+      return;
+    }
+
+    const pengamat = new IntersectionObserver(
+      (masukan) => {
+        if (masukan.some((m) => m.isIntersecting)) {
+          muat();
+          pengamat.disconnect();
+        }
+      },
+      { rootMargin: "300px" },
+    );
+    pengamat.observe(el);
+    return () => pengamat.disconnect();
   }, []);
 
   return (
+    <div ref={wadah}>
     <blockquote
       className="tiktok-embed"
       cite="https://www.tiktok.com/@vinbryyt"
@@ -41,7 +70,8 @@ function TikTokEmbed() {
           @vinbryyt
         </a>
       </section>
-    </blockquote>
+      </blockquote>
+    </div>
   );
 }
 
