@@ -57,8 +57,10 @@
   --line-strong: rgba(11, 11, 13, 0.2);
   --text: #131315;
   --text-dim: #4d4a45;
-  --text-faint: #7c776e;
-  --accent: var(--color-ember-600);
+  /* diperiksa terhadap #faf8f4: 4,19:1 sebelumnya, di bawah ambang WCAG AA */
+  --text-faint: #6b665e;
+  /* aksen versi terang dipekatkan supaya tautan kecil tetap terbaca */
+  --accent: #b8390d;
   --glow: rgba(207, 66, 16, 0.1);
 }
 
