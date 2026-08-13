@@ -284,13 +284,14 @@ export function Marquee({
   speed?: number;
   reverse?: boolean;
 }) {
+  const reduced = useReducedMotion();
   const row = [...items, ...items];
   return (
     <div className="relative flex overflow-hidden py-1" aria-hidden>
       <motion.div
         className="flex shrink-0 gap-8 pr-8"
-        animate={{ x: reverse ? ["-50%", "0%"] : ["0%", "-50%"] }}
-        transition={{ duration: speed, repeat: Infinity, ease: "linear" }}
+        animate={reduced ? undefined : { x: reverse ? ["-50%", "0%"] : ["0%", "-50%"] }}
+        transition={reduced ? undefined : { duration: speed, repeat: Infinity, ease: "linear" }}
       >
         {row.map((it, i) => (
           <span
