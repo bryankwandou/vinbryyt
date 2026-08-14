@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { TiltCard } from "./motion";
 import type { Project } from "@/data/projects";
 
@@ -49,7 +50,12 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
           <p className="font-mono text-[10.5px] tracking-[0.16em]" style={{ color: "var(--text-faint)" }}>
             {String(index + 1).padStart(2, "0")} · {project.language.toUpperCase()}
           </p>
-          <h2 className="mt-2 text-[19px] font-semibold tracking-tight">{project.name}</h2>
+          <h2 className="mt-2 text-[19px] font-semibold tracking-tight">
+            {/* seluruh permukaan kartu jadi tautan lewat lapisan tak terlihat di bawah */}
+            <Link href={`/kerja/${project.slug}`} className="after:absolute after:inset-0 after:z-[5]">
+              {project.name}
+            </Link>
+          </h2>
         </div>
         {project.live && (
           <span
@@ -65,7 +71,8 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
         {project.blurb}
       </p>
 
-      <div className="relative mt-6 flex items-center gap-4 text-[13px]">
+      {/* tautan langsung diangkat di atas lapisan kartu supaya tetap bisa diklik sendiri */}
+      <div className="relative z-10 mt-6 flex items-center gap-4 text-[13px]">
         <a
           href={project.repo}
           target="_blank"

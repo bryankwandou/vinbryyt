@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s · VinBryYT",
   },
   description:
-    "Pengembang full-stack dan Web3 dari Jayapura. Membangun rel pembayaran di atas Solana, perangkat operasional untuk industri, dan aplikasi mobile — 104 repositori terbuka untuk dibaca siapa saja.",
+    "Pengembang full-stack dan Web3 dari Jayapura. Membangun rel pembayaran di atas Solana, perangkat operasional untuk industri, dan aplikasi mobile — 127 repositori terbuka untuk dibaca siapa saja.",
   keywords: [
     "VinBryYT",
     "Vincentius Bryan Kwandou",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: "VinBryYT",
     title: "VinBryYT — Vincentius Bryan Kwandou",
     description:
-      "Kode dan kamera. Rel pembayaran Solana, perangkat operasional, dan 104 repositori yang terbuka untuk diperiksa.",
+      "Kode dan kamera. Rel pembayaran Solana, perangkat operasional, dan 127 repositori yang terbuka untuk diperiksa.",
     images: [
       {
         url: "/og.png",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "VinBryYT — Vincentius Bryan Kwandou",
-    description: "Kode dan kamera. 104 repositori terbuka, rel pembayaran di atas Solana.",
+    description: "Kode dan kamera. 127 repositori terbuka, rel pembayaran di atas Solana.",
     images: ["/og.png"],
   },
   alternates: { canonical: "/" },

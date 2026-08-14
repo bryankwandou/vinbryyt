@@ -136,7 +136,7 @@ export function WorkCatalog() {
         <Reveal>
           <p className="mt-16 text-center text-[13.5px]" style={{ color: "var(--text-faint)" }}>
             Menampilkan {shown.length} dari {projects.length} entri terkurasi. Repositori publik
-            seluruhnya berjumlah 104 —{" "}
+            seluruhnya berjumlah 127 —{" "}
             <a
               href="https://github.com/bryankwandou?tab=repositories"
               target="_blank"

@@ -378,8 +378,11 @@ export const projects: Project[] = [
   },
   {
     slug: "nng-tiktok-live-agent",
-    name: "NNG TikTok Live Agent",
-    blurb: "Agen pendamping siaran langsung TikTok, ditulis dengan Dart.",
+    name: "LoopCaster",
+    // Nama repositorinya menyebut agen TikTok, tetapi isinya pemutar audio
+    // lintas platform. Yang ditulis di sini mengikuti isi, bukan namanya.
+    blurb:
+      "Pemutar audio yang berjalan di enam sistem — Android, iOS, web, Windows, macOS, dan Linux — dari satu basis kode Dart.",
     track: "mobile",
     language: "Dart",
     repo: "https://github.com/bryankwandou/NNG-TIKTOK-LIVE-AGENT",

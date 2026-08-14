@@ -84,7 +84,8 @@ export function Hero() {
                 VinBryYT
               </span>{" "}
               — dua penggal dari nama sendiri, dipakai di depan enam puluh ribu penonton sejak
-              Agustus 2018. Menulis kode yang layak dibuka sejak 2023.
+              Agustus 2018. Sertifikasi teknis pertama menyusul 2023, dan kodenya dibuka
+              untuk umum mulai awal 2026.
             </motion.p>
 
             <motion.div

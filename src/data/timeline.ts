@@ -61,6 +61,16 @@ export const chapters: Chapter[] = [
     source: "Bio TikTok @vinbryyt",
   },
   {
+    year: "21 Februari 2026",
+    title: "Kode mulai dibuka",
+    body:
+      "Akun GitHub dibuat pada tanggal ini, dan dalam enam bulan berikutnya terisi 127 " +
+      "repositori publik. Empat puluh empat di antaranya masuk katalog situs ini. Tanggalnya " +
+      "diambil dari metadata akun, jadi bisa diperiksa sendiri oleh siapa pun.",
+    confirmed: true,
+    source: "GitHub API, /users/bryankwandou",
+  },
+  {
     year: "Tanggal belum dipastikan",
     title: "Kanal YouTube hilang",
     body:
