@@ -6,19 +6,23 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { Wordmark } from "./Logo";
 import { ThemeToggle } from "./ThemeToggle";
+import { LanguageToggle } from "./LanguageToggle";
+import { useTeks } from "@/lib/bahasa";
 
 const nav = [
-  { href: "/", label: "Beranda" },
-  { href: "/kerja", label: "Kerja" },
-  { href: "/galeri", label: "Galeri" },
-  { href: "/riwayat", label: "Riwayat" },
-  { href: "/kontak", label: "Kontak" },
+  { href: "/", id: "Beranda", en: "Home" },
+  { href: "/kerja", id: "Kerja", en: "Work" },
+  { href: "/arsip", id: "Arsip", en: "Archive" },
+  { href: "/galeri", id: "Galeri", en: "Gallery" },
+  { href: "/riwayat", id: "Riwayat", en: "Story" },
+  { href: "/kontak", id: "Kontak", en: "Contact" },
 ];
 
 export function SiteHeader() {
   const pathname = usePathname();
   const [lifted, setLifted] = useState(false);
   const [open, setOpen] = useState(false);
+  const t = useTeks();
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (v) => setLifted(v > 24));
@@ -73,11 +77,12 @@ export function SiteHeader() {
                         transition={{ type: "spring", stiffness: 380, damping: 32 }}
                       />
                     )}
-                    <span className="relative">{item.label}</span>
+                    <span className="relative">{t(item.id, item.en)}</span>
                   </Link>
                 );
               })}
-              <span className="ml-3">
+              <span className="ml-3 flex items-center gap-2">
+                <LanguageToggle />
                 <ThemeToggle />
               </span>
               <a
@@ -92,10 +97,11 @@ export function SiteHeader() {
             </nav>
 
             <div className="flex items-center gap-2 md:hidden">
+              <LanguageToggle />
               <ThemeToggle />
               <button
               onClick={() => setOpen((v) => !v)}
-              aria-label={open ? "Tutup menu" : "Buka menu"}
+              aria-label={open ? t("Tutup menu", "Close menu") : t("Buka menu", "Open menu")}
               aria-expanded={open}
               className="flex h-11 w-11 items-center justify-center rounded-full"
               style={{ border: "1px solid var(--line-strong)" }}
@@ -149,7 +155,7 @@ export function SiteHeader() {
                       color: pathname === item.href ? "var(--accent)" : "var(--text)",
                     }}
                   >
-                    {item.label}
+                    {t(item.id, item.en)}
                   </Link>
                 </motion.div>
               ))}

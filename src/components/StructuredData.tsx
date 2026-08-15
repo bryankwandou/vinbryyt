@@ -18,7 +18,7 @@ export function StructuredData() {
     description: profile.githubBio,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Jayapura",
+      addressLocality: "Makassar",
       addressCountry: "ID",
     },
     knowsLanguage: ["id", "en"],

@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { StructuredData } from "@/components/StructuredData";
 import { themeBootScript } from "@/components/ThemeToggle";
+import { PenyediaBahasa, bahasaBootScript } from "@/lib/bahasa";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s · VinBryYT",
   },
   description:
-    "Pengembang full-stack dan Web3 dari Jayapura. Membangun rel pembayaran di atas Solana, perangkat operasional untuk industri, dan aplikasi mobile — 127 repositori terbuka untuk dibaca siapa saja.",
+    "Pengembang full-stack dan Web3 dari Makassar. Membangun rel pembayaran di atas Solana, perangkat operasional untuk industri, dan aplikasi mobile — 127 repositori terbuka untuk dibaca siapa saja.",
   keywords: [
     "VinBryYT",
     "Vincentius Bryan Kwandou",
@@ -37,7 +38,8 @@ export const metadata: Metadata = {
     "pengembang Solana",
     "Web3 Indonesia",
     "portofolio developer",
-    "Jayapura",
+    "Makassar",
+    "Sulawesi Selatan",
   ],
   authors: [{ name: "Vincentius Bryan Kwandou", url: SITE }],
   creator: "Vincentius Bryan Kwandou",
@@ -54,7 +56,7 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 2400,
         height: 1260,
-        alt: "VinBryYT — Vincentius Bryan Kwandou, Jayapura, Indonesia",
+        alt: "VinBryYT — Vincentius Bryan Kwandou, Makassar, Indonesia",
       },
     ],
   },
@@ -80,6 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="id" className={`${inter.variable} ${display.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
+        <script dangerouslySetInnerHTML={{ __html: bahasaBootScript }} />
         <StructuredData />
       </head>
       <body className="grain antialiased">
@@ -90,9 +93,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Lewati ke isi
         </a>
-        <SiteHeader />
-        <main id="isi">{children}</main>
-        <SiteFooter />
+        <PenyediaBahasa>
+          <SiteHeader />
+          <main id="isi">{children}</main>
+          <SiteFooter />
+        </PenyediaBahasa>
       </body>
     </html>
   );

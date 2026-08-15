@@ -12,7 +12,7 @@ export const profile = {
   handle: "vinbryyt",
   displayName: "VinBryYT",
   shortName: "Bryan",
-  location: "Jayapura, Indonesia",
+  location: "Makassar, Indonesia",
   email: "Vincentius.kwandou@gmail.com",
   avatar: "https://avatars.githubusercontent.com/u/263014785?v=4",
   // sumber: github.com/bryankwandou (API), nayrbryangaming.vercel.app

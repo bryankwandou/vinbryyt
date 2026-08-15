@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Reveal, SplitHeading, Parallax } from "@/components/motion";
 import { TimelineRail } from "@/components/TimelineRail";
+import { RiwayatCV } from "@/components/RiwayatCV";
 import { certifications } from "@/data/timeline";
 import { profile, audience, tiktok } from "@/data/profile";
 
@@ -47,6 +48,8 @@ export default function RiwayatPage() {
       </section>
 
       <TimelineRail />
+
+      <RiwayatCV />
 
       {/* Sertifikasi */}
       <section className="rule mx-auto max-w-6xl px-5 py-28 sm:px-8">
