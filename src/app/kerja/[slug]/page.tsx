@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { projects, tracks } from "@/data/projects";
 import repos from "@/data/repos.json";
 import { Reveal, SplitHeading } from "@/components/motion";
+import { ProyekBlurb, Teks } from "@/components/ProyekTeks";
 
 type Repo = {
   repo: string;
@@ -62,10 +63,10 @@ export default async function ProyekPage({ params }: { params: Promise<{ slug: s
   const sekitar = projects.filter((x) => x.track === p.track && x.slug !== p.slug).slice(0, 3);
 
   const fakta = [
-    { l: "Bahasa", v: p.language },
-    { l: "Dimulai", v: tanggalPanjang(r?.dibuat ?? null) },
-    { l: "Perubahan terakhir", v: tanggalPanjang(r?.disentuh ?? null) },
-    { l: "Lisensi", v: r?.lisensi ?? null },
+{ l: "Bahasa", lEn: "Language", v: p.language },
+{ l: "Dimulai", lEn: "Started", v: tanggalPanjang(r?.dibuat ?? null) },
+{ l: "Perubahan terakhir", lEn: "Last change", v: tanggalPanjang(r?.disentuh ?? null) },
+{ l: "Lisensi", lEn: "Licence", v: r?.lisensi ?? null },
   ].filter((f) => f.v);
 
   /*
@@ -119,11 +120,11 @@ export default async function ProyekPage({ params }: { params: Promise<{ slug: s
               className="link-underline font-mono text-[11px] tracking-[0.14em]"
               style={{ color: "var(--text-faint)" }}
             >
-              KATALOG
+              <Teks id="KATALOG" en="CATALOGUE" />
             </Link>
             <span style={{ color: "var(--text-faint)" }}>/</span>
             <span className="mono-label" style={{ color: "var(--accent)" }}>
-              {jalur?.label ?? p.track}
+<Teks id={jalur?.label ?? p.track} en={jalur?.labelEn ?? p.track} />
             </span>
             {p.live && (
               <span
@@ -147,7 +148,7 @@ export default async function ProyekPage({ params }: { params: Promise<{ slug: s
 
         <Reveal delay={0.25}>
           <p className="mt-6 max-w-2xl text-[17px] leading-relaxed" style={{ color: "var(--text-dim)" }}>
-            {p.blurb}
+            <ProyekBlurb slug={p.slug} blurb={p.blurb} />
           </p>
         </Reveal>
 
@@ -160,7 +161,7 @@ export default async function ProyekPage({ params }: { params: Promise<{ slug: s
               className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-[14px] font-medium"
               style={{ background: "var(--accent)", color: "#0b0b0d" }}
             >
-              Baca kodenya
+              <Teks id="Baca kodenya" en="Read the code" />
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
                 <path d="M3 9L9 3M9 3H4M9 3v5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
               </svg>
@@ -173,7 +174,7 @@ export default async function ProyekPage({ params }: { params: Promise<{ slug: s
                 className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-[14px]"
                 style={{ border: "1px solid var(--line-strong)", color: "var(--text)" }}
               >
-                Buka situsnya
+                <Teks id="Buka situsnya" en="Open the site" />
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
                   <path d="M3 9L9 3M9 3H4M9 3v5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                 </svg>
@@ -206,7 +207,7 @@ export default async function ProyekPage({ params }: { params: Promise<{ slug: s
           <div>
             {r?.ringkas ? (
               <Reveal>
-                <p className="mono-label">Dari README repositori</p>
+<p className="mono-label"><Teks id="Dari README repositori" en="From the repository README" /></p>
                 <blockquote
                   className="mt-4 rounded-xl p-6 text-[15.5px] leading-relaxed"
                   style={{
@@ -218,16 +219,20 @@ export default async function ProyekPage({ params }: { params: Promise<{ slug: s
                   {r.ringkas}
                 </blockquote>
                 <p className="mt-3 text-[12.5px]" style={{ color: "var(--text-faint)" }}>
-                  Disalin apa adanya dari berkas README, dalam bahasa aslinya. Tidak diringkas
-                  ulang supaya yang terbaca tetap kalimat penulisnya sendiri.
+                  <Teks
+                    id="Disalin apa adanya dari berkas README, dalam bahasa aslinya. Tidak diringkas ulang supaya yang terbaca tetap kalimat penulisnya sendiri."
+                    en="Copied verbatim from the README file, in its original language. It is not re-summarised, so what you read stays the author's own sentence."
+                  />
                 </p>
               </Reveal>
             ) : (
               <Reveal>
                 <p className="mono-label">Dari README repositori</p>
                 <p className="mt-4 text-[14.5px] leading-relaxed" style={{ color: "var(--text-faint)" }}>
-                  README proyek ini tidak memuat paragraf yang menjelaskan isinya — hanya tabel dan
-                  judul. Bagian ini sengaja dikosongkan daripada diisi kalimat yang belum tentu benar.
+                  <Teks
+                    id="README proyek ini tidak memuat paragraf yang menjelaskan isinya — hanya tabel dan judul. Bagian ini sengaja dikosongkan daripada diisi kalimat yang belum tentu benar."
+                    en="This project's README carries no paragraph explaining what it is — only tables and headings. This section is deliberately left empty rather than filled with a sentence that might be wrong."
+                  />
                 </p>
               </Reveal>
             )}
@@ -235,7 +240,7 @@ export default async function ProyekPage({ params }: { params: Promise<{ slug: s
             {r?.topik?.length > 0 && (
               <Reveal delay={0.1}>
                 <div className="mt-10">
-                  <p className="mono-label">Topik yang ditandai penulisnya</p>
+                  <p className="mono-label"><Teks id="Topik yang ditandai penulisnya" en="Topics tagged by the author" /></p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {r.topik.map((t) => (
                       <span
@@ -254,7 +259,7 @@ export default async function ProyekPage({ params }: { params: Promise<{ slug: s
 
           <div>
             <Reveal delay={0.15}>
-              <p className="mono-label">Catatan repositori</p>
+              <p className="mono-label"><Teks id="Catatan repositori" en="Repository record" /></p>
               <dl className="mt-4 overflow-hidden rounded-xl" style={{ border: "1px solid var(--line)" }}>
                 {fakta.map((f, i) => (
                   <div
@@ -263,14 +268,14 @@ export default async function ProyekPage({ params }: { params: Promise<{ slug: s
                     style={{ borderTop: i ? "1px solid var(--line)" : undefined }}
                   >
                     <dt className="font-mono text-[10px] tracking-[0.13em]" style={{ color: "var(--text-faint)" }}>
-                      {f.l.toUpperCase()}
+<Teks id={f.l.toUpperCase()} en={f.lEn.toUpperCase()} />
                     </dt>
                     <dd className="text-right text-[13.5px]">{f.v}</dd>
                   </div>
                 ))}
               </dl>
               <p className="mt-3 text-[12.5px] leading-relaxed" style={{ color: "var(--text-faint)" }}>
-                Tanggal dibaca dari metadata GitHub, bukan diketik manual.
+                <Teks id="Tanggal dibaca dari metadata GitHub, bukan diketik manual." en="The dates are read from GitHub metadata, not typed by hand." />
               </p>
             </Reveal>
           </div>
@@ -279,7 +284,7 @@ export default async function ProyekPage({ params }: { params: Promise<{ slug: s
 
       {sekitar.length > 0 && (
         <section className="rule mx-auto max-w-5xl px-5 py-16 sm:px-8">
-          <p className="mono-label">Yang lain di jalur {jalur?.label.toLowerCase()}</p>
+          <p className="mono-label"><Teks id={`Yang lain di jalur ${jalur?.label.toLowerCase()}`} en={`More in ${jalur?.labelEn.toLowerCase()}`} /></p>
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
             {sekitar.map((s) => (
               <Link
@@ -295,7 +300,7 @@ export default async function ProyekPage({ params }: { params: Promise<{ slug: s
                   {s.name}
                 </p>
                 <p className="mt-2 line-clamp-2 text-[13px] leading-relaxed" style={{ color: "var(--text-dim)" }}>
-                  {s.blurb}
+                  <ProyekBlurb slug={s.slug} blurb={s.blurb} />
                 </p>
               </Link>
             ))}

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { TiltCard } from "./motion";
 import type { Project } from "@/data/projects";
 import { useTeks } from "@/lib/bahasa";
+import { blurbEn } from "@/data/projects-en";
 
 export function ProjectCard({ project, index }: { project: Project; index: number }) {
   const t = useTeks();
@@ -71,7 +72,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
       </div>
 
       <p className="relative mt-3.5 flex-1 text-[14px] leading-relaxed" style={{ color: "var(--text-dim)" }}>
-        {project.blurb}
+        {t(project.blurb, blurbEn[project.slug] ?? project.blurb)}
       </p>
 
       {/* tautan langsung diangkat di atas lapisan kartu supaya tetap bisa diklik sendiri */}

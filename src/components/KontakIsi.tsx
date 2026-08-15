@@ -84,7 +84,7 @@ export function KontakIsi() {
                   </div>
                   {s.note && (
                     <p className="mt-6 text-[13.5px] leading-relaxed" style={{ color: "var(--text-dim)" }}>
-                      {s.note}
+                      {t(s.note, s.noteEn ?? s.note)}
                     </p>
                   )}
                 </a>

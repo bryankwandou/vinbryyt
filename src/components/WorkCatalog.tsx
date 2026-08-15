@@ -6,6 +6,7 @@ import { ProjectCard } from "./ProjectCard";
 import { ReadingBar, SplitHeading, Reveal } from "./motion";
 import { projects, tracks, type Track } from "@/data/projects";
 import { useTeks } from "@/lib/bahasa";
+import { blurbEn } from "@/data/projects-en";
 
 type Filter = Track | "semua";
 
@@ -22,6 +23,7 @@ export function WorkCatalog() {
         !term ||
         p.name.toLowerCase().includes(term) ||
         p.blurb.toLowerCase().includes(term) ||
+        (blurbEn[p.slug] ?? "").toLowerCase().includes(term) ||
         p.language.toLowerCase().includes(term);
       return okTrack && okTerm;
     });

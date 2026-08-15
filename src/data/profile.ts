@@ -43,6 +43,7 @@ export type SocialLink = {
   handle: string;
   href: string;
   note?: string;
+  noteEn?: string;
   /** Angka publik yang terbaca dari tag pratinjau halaman profil. */
   metrics?: { followers?: number; following?: number; posts?: number };
   verified: boolean;
@@ -60,6 +61,7 @@ export const socials: SocialLink[] = [
     handle: "@vinbryyt",
     href: "https://www.tiktok.com/@vinbryyt",
     note: "Akun utama, berdiri 1 Agustus 2018.",
+    noteEn: "Main account, opened 1 August 2018.",
     metrics: { followers: 60300, following: 122 },
     verified: true, // angka dibaca dari widget embed kreator resmi TikTok
   },
@@ -68,6 +70,7 @@ export const socials: SocialLink[] = [
     handle: "@nayrbryan_gaming",
     href: "https://www.instagram.com/nayrbryan_gaming/",
     note: "Akun terbesar. Psikologi dagang, disiplin, dan pengelolaan risiko.",
+    noteEn: "The largest account. Trading psychology, discipline, and risk management.",
     metrics: { followers: 1516, following: 2290, posts: 3863 },
     verified: true,
   },
@@ -76,6 +79,7 @@ export const socials: SocialLink[] = [
     handle: "@bryan_kwandou",
     href: "https://www.instagram.com/bryan_kwandou/",
     note: "Akun pribadi. Catatan kerja, sertifikat, dan kegiatan komunitas.",
+    noteEn: "Personal account. Work notes, certificates, and community activity.",
     metrics: { followers: 368, following: 493, posts: 1174 },
     verified: true,
   },
@@ -84,6 +88,7 @@ export const socials: SocialLink[] = [
     handle: "@bryankwandou",
     href: "https://github.com/bryankwandou",
     note: "128 repositori publik, semuanya terbuka untuk dibaca.",
+    noteEn: "128 public repositories, all open to read.",
     metrics: { posts: 128 },
     verified: true,
   },
@@ -92,6 +97,7 @@ export const socials: SocialLink[] = [
     handle: "@lensanuswantara",
     href: "https://www.instagram.com/lensanuswantara/",
     note: "Komunitas fotografi Nusantara yang ikut dibina.",
+    noteEn: "An Indonesian photography community he helps run.",
     metrics: { followers: 18000, following: 20, posts: 2906 },
     verified: true,
   },
@@ -100,6 +106,7 @@ export const socials: SocialLink[] = [
     handle: "@nayrbryan_gaming",
     href: "https://www.threads.com/@nayrbryan_gaming",
     note: "Akun Threads terbesar. Angka dibaca 16 Agustus 2026.",
+    noteEn: "His largest Threads account. Figures read 16 August 2026.",
     metrics: { followers: 204 },
     verified: true,
   },
@@ -108,6 +115,7 @@ export const socials: SocialLink[] = [
     handle: "@bryan_kwandou",
     href: "https://www.threads.com/@bryan_kwandou",
     note: "Bionya menyebut content creator sejak 2010 — sumber kedua yang berdiri sendiri.",
+    noteEn: "Its bio says content creator since 2010 — a second, independent source.",
     metrics: { followers: 135 },
     verified: true,
   },
@@ -116,6 +124,7 @@ export const socials: SocialLink[] = [
     handle: "in/bryankwandou",
     href: "https://www.linkedin.com/in/bryankwandou",
     note: "Riwayat kerja dan pendidikan, sumber data halaman Riwayat.",
+    noteEn: "Work and education history, the source behind the Story page.",
     verified: true,
   },
   {
@@ -123,6 +132,7 @@ export const socials: SocialLink[] = [
     handle: "Koleksi Tezos",
     href: "https://objkt.com/collections/KT1R67wX2kCii82cqyo8DVYWXccM4HcJwHki",
     note: "485 karya yang diterbitkan di blockchain Tezos sejak 2022.",
+    noteEn: "485 works published on the Tezos blockchain since 2022.",
     metrics: { posts: 485 },
     verified: true,
   },
