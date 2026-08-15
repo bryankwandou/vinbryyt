@@ -1,106 +1,12 @@
 import type { Metadata } from "next";
-import { Reveal, SplitHeading, Magnetic } from "@/components/motion";
-import { socials, profile } from "@/data/profile";
+import { KontakIsi } from "@/components/KontakIsi";
 
 export const metadata: Metadata = {
   title: "Kontak",
-  description: "Cara menghubungi Vincentius Bryan Kwandou — email, GitHub, TikTok, dan Instagram.",
+  description:
+    "Cara menghubungi Vincentius Bryan Kwandou — email, GitHub, LinkedIn, TikTok, Instagram, dan koleksi Tezos.",
 };
 
 export default function KontakPage() {
-  return (
-    <>
-      <section className="mx-auto max-w-6xl px-5 pb-16 pt-[160px] sm:px-8">
-        <p className="mono-label" style={{ color: "var(--accent)" }}>
-          Kontak
-        </p>
-        <SplitHeading
-          text="Cara paling cepat menghubungi"
-          className="mt-6 max-w-3xl text-[clamp(2.2rem,5.6vw,4.2rem)] font-semibold leading-[1.02] tracking-[-0.035em]"
-        />
-        <Reveal delay={0.4}>
-          <p className="mt-7 max-w-xl text-[16px] leading-relaxed" style={{ color: "var(--text-dim)" }}>
-            Email paling saya perhatikan. Kalau soal kode, GitHub lebih tepat — issue atau pull request
-            langsung masuk ke antrean yang benar.
-          </p>
-        </Reveal>
-      </section>
-
-      <section className="rule mx-auto max-w-6xl px-5 py-16 sm:px-8">
-        <Magnetic strength={0.06}>
-          <a
-            href={`mailto:${profile.email}`}
-            className="group block rounded-2xl p-8 transition-colors sm:p-12"
-            style={{ border: "1px solid var(--line-strong)", background: "var(--surface)" }}
-          >
-            <p className="mono-label">Surat elektronik</p>
-            <p className="mt-4 break-all text-[clamp(1.4rem,4vw,2.6rem)] font-semibold tracking-[-0.03em] transition-colors group-hover:text-[var(--accent)]">
-              {profile.email}
-            </p>
-            <p className="mt-5 text-[14px]" style={{ color: "var(--text-dim)" }}>
-              Klik untuk membuka aplikasi surat Anda.
-            </p>
-          </a>
-        </Magnetic>
-
-        <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {socials
-            .filter((s) => s.label !== "Email")
-            .map((s, i) => (
-              <Reveal key={s.href} delay={i * 0.06}>
-                <a
-                  href={s.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group flex h-full flex-col justify-between rounded-2xl p-6 transition-transform hover:-translate-y-1"
-                  style={{ border: "1px solid var(--line)", background: "var(--surface)" }}
-                >
-                  <div className="flex items-start justify-between gap-3">
-                    <div>
-                      <p className="mono-label">{s.label}</p>
-                      <p className="mt-2.5 text-[17px] font-medium tracking-tight transition-colors group-hover:text-[var(--accent)]">
-                        {s.handle}
-                      </p>
-                    </div>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 12 12"
-                      fill="none"
-                      aria-hidden
-                      className="mt-1 shrink-0 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                      style={{ color: "var(--text-faint)" }}
-                    >
-                      <path d="M3 9L9 3M9 3H4M9 3v5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-                    </svg>
-                  </div>
-                  {s.note && (
-                    <p className="mt-6 text-[13.5px] leading-relaxed" style={{ color: "var(--text-dim)" }}>
-                      {s.note}
-                    </p>
-                  )}
-                </a>
-              </Reveal>
-            ))}
-        </div>
-      </section>
-
-      <section className="rule mx-auto max-w-6xl px-5 py-24 sm:px-8">
-        <div className="grid gap-10 sm:grid-cols-3">
-          {[
-            { k: "Domisili", v: profile.location },
-            { k: "Zona waktu", v: "WIT, UTC+9" },
-            { k: "Bahasa", v: "Indonesia, Inggris" },
-          ].map((row) => (
-            <Reveal key={row.k}>
-              <div style={{ borderTop: "1px solid var(--line)" }} className="pt-5">
-                <p className="mono-label">{row.k}</p>
-                <p className="mt-2.5 text-[17px]">{row.v}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-    </>
-  );
+  return <KontakIsi />;
 }

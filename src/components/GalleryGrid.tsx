@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Reveal } from "./motion";
+import { useTeks } from "@/lib/bahasa";
 
 export type Foto = {
   slug: string;
@@ -17,6 +18,7 @@ export type Foto = {
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 export function GalleryGrid({ foto }: { foto: Foto[] }) {
+  const t = useTeks();
   const [terbuka, setTerbuka] = useState<number | null>(null);
 
   const tutup = useCallback(() => setTerbuka(null), []);
@@ -48,12 +50,17 @@ export function GalleryGrid({ foto }: { foto: Foto[] }) {
         style={{ border: "1px dashed var(--line-strong)" }}
       >
         <p className="text-[17px]" style={{ color: "var(--text)" }}>
-          Galerinya masih kosong
+          {t("Galerinya masih kosong", "The gallery is still empty")}
         </p>
         <p className="mx-auto mt-3 max-w-md text-[14px] leading-relaxed" style={{ color: "var(--text-dim)" }}>
-          Jatuhkan foto ke <code className="font-mono">public/galeri/masuk/</code> lalu jalankan{" "}
-          <code className="font-mono">node scripts/build-gallery.mjs</code>. Ukuran dan format apa
-          pun diterima; skripnya yang mengurus pengecilan dan konversi.
+          {t("Jatuhkan foto ke", "Drop images into")}{" "}
+          <code className="font-mono">public/galeri/masuk/</code>{" "}
+          {t("lalu jalankan", "then run")}{" "}
+          <code className="font-mono">node scripts/build-gallery.mjs</code>.{" "}
+          {t(
+            "Ukuran dan format apa pun diterima; skripnya yang mengurus pengecilan dan konversi.",
+            "Any size or format is accepted; the script handles the resizing and conversion.",
+          )}
         </p>
       </div>
     );
@@ -71,11 +78,11 @@ export function GalleryGrid({ foto }: { foto: Foto[] }) {
               onClick={() => setTerbuka(i)}
               className="group relative block w-full overflow-hidden rounded-xl"
               style={{ border: "1px solid var(--line)" }}
-              aria-label={`Perbesar foto: ${f.keterangan || f.slug}`}
+              aria-label={t(`Perbesar foto: ${f.keterangan || f.slug}`, `Enlarge image: ${f.keterangan || f.slug}`)}
             >
               <Image
                 src={f.kecil}
-                alt={f.keterangan || `Foto ${f.slug}`}
+                alt={f.keterangan || t(`Karya ${f.slug}`, `Work ${f.slug}`)}
                 width={f.lebar}
                 height={f.tinggi}
                 sizes="(max-width: 768px) 50vw, 33vw"
@@ -119,7 +126,7 @@ export function GalleryGrid({ foto }: { foto: Foto[] }) {
             >
               <Image
                 src={aktif.besar}
-                alt={aktif.keterangan || `Foto ${aktif.slug}`}
+                alt={aktif.keterangan || t(`Karya ${aktif.slug}`, `Work ${aktif.slug}`)}
                 width={aktif.lebar}
                 height={aktif.tinggi}
                 sizes="90vw"
@@ -139,7 +146,7 @@ export function GalleryGrid({ foto }: { foto: Foto[] }) {
                 e.stopPropagation();
                 geser(-1);
               }}
-              aria-label="Foto sebelumnya"
+              aria-label={t("Karya sebelumnya", "Previous work")}
               className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full sm:left-6"
               style={{ background: "rgba(246,243,236,0.1)", color: "#f6f3ec" }}
             >
@@ -152,7 +159,7 @@ export function GalleryGrid({ foto }: { foto: Foto[] }) {
                 e.stopPropagation();
                 geser(1);
               }}
-              aria-label="Foto berikutnya"
+              aria-label={t("Karya berikutnya", "Next work")}
               className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full sm:right-6"
               style={{ background: "rgba(246,243,236,0.1)", color: "#f6f3ec" }}
             >
@@ -162,7 +169,7 @@ export function GalleryGrid({ foto }: { foto: Foto[] }) {
             </button>
             <button
               onClick={tutup}
-              aria-label="Tutup"
+              aria-label={t("Tutup", "Close")}
               className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full sm:right-8 sm:top-8"
               style={{ background: "rgba(246,243,236,0.1)", color: "#f6f3ec" }}
             >

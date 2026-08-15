@@ -68,8 +68,49 @@ export default async function ProyekPage({ params }: { params: Promise<{ slug: s
     { l: "Lisensi", v: r?.lisensi ?? null },
   ].filter((f) => f.v);
 
+  /*
+    Data terstruktur per proyek. Mesin pencari memakai ini untuk menampilkan
+    kartu yang lebih kaya, dan remah roti membuat halaman ini terbaca sebagai
+    bagian dari katalog, bukan halaman lepas.
+  */
+  const skema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareSourceCode",
+        name: p.name,
+        description: p.blurb,
+        codeRepository: p.repo,
+        programmingLanguage: p.language,
+        image: `https://vinbryyt.vercel.app/proyek/${p.slug}.webp`,
+        ...(r?.dibuat ? { dateCreated: r.dibuat } : {}),
+        ...(r?.disentuh ? { dateModified: r.disentuh } : {}),
+        ...(r?.lisensi ? { license: r.lisensi } : {}),
+        ...(p.live ? { url: p.live } : {}),
+        author: {
+          "@type": "Person",
+          name: "Vincentius Bryan Kwandou",
+          url: "https://vinbryyt.vercel.app",
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Beranda", item: "https://vinbryyt.vercel.app" },
+          { "@type": "ListItem", position: 2, name: "Kerja", item: "https://vinbryyt.vercel.app/kerja" },
+          { "@type": "ListItem", position: 3, name: p.name },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(skema) }}
+      />
+
       <section className="mx-auto max-w-5xl px-5 pb-12 pt-[140px] sm:px-8">
         <Reveal>
           <div className="flex flex-wrap items-center gap-x-3 gap-y-2">

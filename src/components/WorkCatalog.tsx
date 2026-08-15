@@ -5,10 +5,12 @@ import { AnimatePresence, motion, LayoutGroup } from "framer-motion";
 import { ProjectCard } from "./ProjectCard";
 import { ReadingBar, SplitHeading, Reveal } from "./motion";
 import { projects, tracks, type Track } from "@/data/projects";
+import { useTeks } from "@/lib/bahasa";
 
 type Filter = Track | "semua";
 
 export function WorkCatalog() {
+  const teks = useTeks();
   const [filter, setFilter] = useState<Filter>("semua");
   const [q, setQ] = useState("");
 
@@ -26,10 +28,10 @@ export function WorkCatalog() {
   }, [filter, q]);
 
   const chips: { id: Filter; label: string; n: number }[] = [
-    { id: "semua", label: "Semua", n: projects.length },
+    { id: "semua", label: teks("Semua", "All"), n: projects.length },
     ...tracks.map((t) => ({
       id: t.id as Filter,
-      label: t.label,
+      label: teks(t.label, t.labelEn),
       n: projects.filter((p) => p.track === t.id).length,
     })),
   ];
@@ -43,7 +45,7 @@ export function WorkCatalog() {
           Katalog
         </p>
         <SplitHeading
-          text="Semua yang pernah didorong ke publik"
+          text={teks("Semua yang pernah didorong ke publik", "Everything ever pushed in public")}
           className="mt-6 max-w-3xl text-[clamp(2.2rem,5.6vw,4.2rem)] font-semibold leading-[1.02] tracking-[-0.035em]"
         />
         <motion.p
@@ -53,8 +55,10 @@ export function WorkCatalog() {
           className="mt-7 max-w-2xl text-[16px] leading-relaxed"
           style={{ color: "var(--text-dim)" }}
         >
-          Daftar ini disusun dari metadata repositori GitHub, bukan dari ingatan. Tiap kartu membawa
-          tautan ke kodenya; yang bertanda LIVE punya situs yang bisa dibuka sekarang juga.
+          {teks(
+            "Daftar ini disusun dari metadata repositori GitHub, bukan dari ingatan. Tiap kartu membawa tautan ke kodenya; yang bertanda LIVE punya situs yang bisa dibuka sekarang juga.",
+            "This list is assembled from GitHub repository metadata, not from memory. Every card links to its code; the ones marked LIVE have a site you can open right now.",
+          )}
         </motion.p>
       </section>
 
@@ -94,7 +98,7 @@ export function WorkCatalog() {
             <input
               value={q}
               onChange={(e) => setQ(e.target.value)}
-              placeholder="Cari..."
+              placeholder={teks("Cari...", "Search...")}
               className="w-full rounded-full bg-transparent px-4 py-3 text-[13px] outline-none"
               style={{ border: "1px solid var(--line-strong)", color: "var(--text)" }}
             />
@@ -113,7 +117,7 @@ export function WorkCatalog() {
               className="py-24 text-center text-[15px]"
               style={{ color: "var(--text-faint)" }}
             >
-              Tidak ada yang cocok dengan &ldquo;{q}&rdquo;. Coba kata lain.
+              {teks(`Tidak ada yang cocok dengan “${q}”. Coba kata lain.`, `Nothing matches “${q}”. Try another word.`)}
             </motion.p>
           ) : (
             <motion.div layout className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -135,8 +139,10 @@ export function WorkCatalog() {
 
         <Reveal>
           <p className="mt-16 text-center text-[13.5px]" style={{ color: "var(--text-faint)" }}>
-            Menampilkan {shown.length} dari {projects.length} entri terkurasi. Repositori publik
-            seluruhnya berjumlah 127 —{" "}
+            {teks(
+              `Menampilkan ${shown.length} dari ${projects.length} entri terkurasi. Repositori publik seluruhnya berjumlah 128 — `,
+              `Showing ${shown.length} of ${projects.length} curated entries. There are 128 public repositories in total — `,
+            )}
             <a
               href="https://github.com/bryankwandou?tab=repositories"
               target="_blank"
@@ -144,7 +150,7 @@ export function WorkCatalog() {
               className="link-underline"
               style={{ color: "var(--accent)" }}
             >
-              telusuri sisanya di GitHub
+              {teks("telusuri semuanya di Arsip", "browse them all in the Archive")}
             </a>
             .
           </p>

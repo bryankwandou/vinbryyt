@@ -3,11 +3,13 @@
 import { useRef } from "react";
 import { motion, useScroll, useSpring, useInView, useReducedMotion } from "framer-motion";
 import { chapters } from "@/data/timeline";
+import { useTeks } from "@/lib/bahasa";
 
 function Chapter({ c, i }: { c: (typeof chapters)[number]; i: number }) {
   const ref = useRef<HTMLLIElement>(null);
   const inView = useInView(ref, { once: true, margin: "-20% 0px -20% 0px" });
   const reduced = useReducedMotion();
+  const t = useTeks();
 
   return (
     <li ref={ref} className="relative pl-12 sm:pl-20">
@@ -34,27 +36,27 @@ function Chapter({ c, i }: { c: (typeof chapters)[number]; i: number }) {
       >
         <div className="flex flex-wrap items-center gap-3">
           <span className="font-mono text-[12px] tracking-[0.14em]" style={{ color: "var(--accent)" }}>
-            {c.year.toUpperCase()}
+            {t(c.year, c.yearEn).toUpperCase()}
           </span>
           {!c.confirmed && (
             <span
               className="rounded-full px-2.5 py-0.5 font-mono text-[9.5px] tracking-[0.1em]"
               style={{ border: "1px solid var(--line-strong)", color: "var(--text-faint)" }}
             >
-              BELUM TERKONFIRMASI
+              {t("BELUM TERKONFIRMASI", "NOT CONFIRMED")}
             </span>
           )}
         </div>
 
         <h2 className="mt-3 text-[clamp(1.35rem,2.6vw,1.9rem)] font-semibold leading-tight tracking-[-0.025em]">
-          {c.title}
+          {t(c.title, c.titleEn)}
         </h2>
         <p className="mt-3.5 max-w-2xl text-[15px] leading-relaxed" style={{ color: "var(--text-dim)" }}>
-          {c.body}
+          {t(c.body, c.bodyEn)}
         </p>
         {c.source && (
           <p className="mt-4 font-mono text-[10.5px] tracking-[0.12em]" style={{ color: "var(--text-faint)" }}>
-            SUMBER · {c.source.toUpperCase()}
+            {t("SUMBER", "SOURCE")} · {t(c.source, c.sourceEn ?? c.source).toUpperCase()}
           </p>
         )}
       </motion.div>

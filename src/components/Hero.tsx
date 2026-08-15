@@ -6,12 +6,14 @@ import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion
 import { useRef } from "react";
 import { SplitHeading, Magnetic, Marquee } from "./motion";
 import { profile } from "@/data/profile";
+import { useTeks } from "@/lib/bahasa";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
   const reduced = useReducedMotion();
+  const t = useTeks();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const fade = useTransform(scrollYProgress, [0, 0.85], [1, 0]);
   const lift = useTransform(scrollYProgress, [0, 1], [0, -90]);
@@ -57,7 +59,7 @@ export function Hero() {
             <span className="relative inline-flex h-2 w-2 rounded-full" style={{ background: "var(--accent)" }} />
           </span>
           <span className="mono-label leading-[1.5]">
-            Terbuka untuk kerja sama · {profile.location}
+            {t("Terbuka untuk kerja sama", "Open to collaboration")} · {profile.location}
           </span>
         </motion.div>
 
@@ -76,16 +78,21 @@ export function Hero() {
               className="mt-7 max-w-[38rem] text-[clamp(1rem,1.65vw,1.2rem)] leading-relaxed"
               style={{ color: "var(--text-dim)" }}
             >
-              {profile.headline} Dikenal di layar sebagai{" "}
+              {t(
+                profile.headline,
+                "Building software that can be checked, and filming the process along the way.",
+              )}{" "}
+              {t("Dikenal di layar sebagai", "Known on screen as")}{" "}
               <span
                 className="italic"
                 style={{ fontFamily: "var(--font-display)", color: "var(--text)" }}
               >
                 VinBryYT
               </span>{" "}
-              — dua penggal dari nama sendiri, dipakai di depan enam puluh ribu penonton sejak
-              Agustus 2018. Sertifikasi teknis pertama menyusul 2023, dan kodenya dibuka
-              untuk umum mulai awal 2026.
+              {t(
+                "— dua penggal dari nama sendiri, dipakai di depan enam puluh ribu penonton sejak Agustus 2018. Sertifikasi teknis pertama menyusul 2023, dan kodenya dibuka untuk umum mulai awal 2026.",
+                "— two fragments of his own name, carried in front of sixty thousand viewers since August 2018. The first technical certificates followed in 2023, and the code went public in early 2026.",
+              )}
             </motion.p>
 
             <motion.div
@@ -100,7 +107,7 @@ export function Hero() {
                   className="group inline-flex items-center gap-2.5 rounded-full px-6 py-3.5 text-[14.5px] font-medium"
                   style={{ background: "var(--accent)", color: "#0b0b0d" }}
                 >
-                  Lihat yang sudah dikerjakan
+                  {t("Lihat yang sudah dikerjakan", "See the work")}
                   <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden>
                     <path
                       d="M3 8h10M9 4l4 4-4 4"
@@ -120,7 +127,7 @@ export function Hero() {
                   className="inline-flex items-center rounded-full px-6 py-3.5 text-[14.5px] transition-colors"
                   style={{ border: "1px solid var(--line-strong)", color: "var(--text)" }}
                 >
-                  Baca riwayatnya
+                  {t("Baca riwayatnya", "Read the story")}
                 </Link>
               </Magnetic>
             </motion.div>
@@ -139,7 +146,7 @@ export function Hero() {
             >
               <Image
                 src={profile.avatar}
-                alt={`Potret ${profile.legalName}`}
+                alt={t(`Potret ${profile.legalName}`, `Portrait of ${profile.legalName}`)}
                 fill
                 sizes="(max-width: 1024px) 76vw, 19rem"
                 className="object-cover"
@@ -152,7 +159,7 @@ export function Hero() {
               />
               <div className="absolute inset-x-0 bottom-0 p-4">
                 <p className="font-mono text-[10.5px] tracking-[0.16em] text-bone-300">
-                  @VINBRYYT · JAYAPURA
+                  @VINBRYYT · MAKASSAR
                 </p>
               </div>
             </div>
@@ -165,7 +172,7 @@ export function Hero() {
             >
               <p className="text-[22px] font-semibold leading-none">60,3 rb</p>
               <p className="mt-1 font-mono text-[9.5px] tracking-[0.14em]" style={{ color: "var(--text-faint)" }}>
-                PENGIKUT TIKTOK
+                {t("PENGIKUT TIKTOK", "TIKTOK FOLLOWERS")}
               </p>
             </motion.div>
           </motion.div>

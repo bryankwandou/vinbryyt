@@ -4,8 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { TiltCard } from "./motion";
 import type { Project } from "@/data/projects";
+import { useTeks } from "@/lib/bahasa";
 
 export function ProjectCard({ project, index }: { project: Project; index: number }) {
+  const t = useTeks();
+
   return (
     <TiltCard
       className="group relative flex h-full flex-col overflow-hidden rounded-2xl transition-colors duration-300"
@@ -26,7 +29,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
       <div className="relative m-[1px] mb-0 aspect-[2/1] overflow-hidden rounded-t-2xl">
         <Image
           src={`/proyek/${project.slug}.webp`}
-          alt={`Pratinjau repositori ${project.name}`}
+          alt={t(`Pratinjau repositori ${project.name}`, `Repository preview for ${project.name}`)}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="preview-img object-cover transition-all duration-700 group-hover:scale-[1.04]"
@@ -80,7 +83,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
           className="link-underline inline-flex items-center gap-1.5"
           style={{ color: "var(--text)" }}
         >
-          Kode
+          {t("Kode", "Code")}
           <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden>
             <path d="M3 9L9 3M9 3H4M9 3v5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
           </svg>
@@ -93,7 +96,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
             className="link-underline inline-flex items-center gap-1.5"
             style={{ color: "var(--accent)" }}
           >
-            Buka situsnya
+            {t("Buka situsnya", "Open the site")}
             <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden>
               <path d="M3 9L9 3M9 3H4M9 3v5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
             </svg>

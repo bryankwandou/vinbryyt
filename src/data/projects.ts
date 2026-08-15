@@ -19,12 +19,12 @@ export type Project = {
   featured?: boolean;
 };
 
-export const tracks: { id: Track; label: string; caption: string }[] = [
-  { id: "web3", label: "Rel Web3", caption: "Pembayaran dan bukti di atas Solana" },
-  { id: "produk", label: "Perangkat Operasional", caption: "Alat kerja untuk industri tertentu" },
-  { id: "mobile", label: "Mobile", caption: "Aplikasi Flutter dan Dart" },
-  { id: "riset", label: "Riset & Perkakas", caption: "Eksperimen infrastruktur dan LLM" },
-  { id: "sipil", label: "Publik & Kampus", caption: "Tugas, lomba, dan layanan warga" },
+export const tracks: { id: Track; label: string; labelEn: string; caption: string; captionEn: string }[] = [
+  { id: "web3", label: "Rel Web3", labelEn: "Web3 rails", caption: "Pembayaran dan bukti di atas Solana", captionEn: "Payments and proofs on Solana" },
+  { id: "produk", label: "Perangkat Operasional", labelEn: "Operations tools", caption: "Alat kerja untuk industri tertentu", captionEn: "Working tools for specific industries" },
+  { id: "mobile", label: "Mobile", labelEn: "Mobile", caption: "Aplikasi Flutter dan Dart", captionEn: "Flutter and Dart applications" },
+  { id: "riset", label: "Riset & Perkakas", labelEn: "Research & tooling", caption: "Eksperimen infrastruktur dan LLM", captionEn: "Infrastructure and LLM experiments" },
+  { id: "sipil", label: "Publik & Kampus", labelEn: "Civic & campus", caption: "Tugas, lomba, dan layanan warga", captionEn: "Coursework, contests, and public services" },
 ];
 
 export const projects: Project[] = [
