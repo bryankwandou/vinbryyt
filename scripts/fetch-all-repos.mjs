@@ -36,7 +36,9 @@ for (let hal = 1; hal <= 4; hal++) {
     break;
   }
   const batch = await r.json();
-  repo.push(...batch.filter((x) => !x.fork && !x.archived));
+  // fork tetap diambil supaya jumlahnya persis sama dengan yang tertulis di GitHub,
+  // tetapi ditandai supaya pembaca tahu itu bukan karya sendiri
+  repo.push(...batch.filter((x) => !x.archived));
   if (batch.length < 100) break;
 }
 console.log(`repositori publik (bukan fork): ${repo.length}\n`);
@@ -179,6 +181,7 @@ for (const x of repo) {
     repo: x.html_url,
     live: x.homepage || null,
     lisensi: x.license?.spdx_id || null,
+    fork: !!x.fork,
     gambar: punyaGambar ? `/proyek/${slug}.webp` : null,
   });
 

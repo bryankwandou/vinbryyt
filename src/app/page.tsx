@@ -5,6 +5,7 @@ import { Hero } from "@/components/Hero";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Reveal, Stagger, StaggerItem, Counter, Parallax, SplitHeading } from "@/components/motion";
 import { Presence } from "@/components/Presence";
+import { Afiliasi } from "@/components/Afiliasi";
 import { featured } from "@/data/projects";
 import { disciplines } from "@/data/timeline";
 import { profile, audience } from "@/data/profile";
@@ -52,12 +53,6 @@ export default function Home() {
                   "The work circles one question: how do you prove an action actually happened, without asking anyone to take your word for it. In code the answer is a receipt that can be checked again. On camera it is the raw footage.",
                 )}
               </p>
-              <p className="text-[15px] leading-relaxed" style={{ color: "var(--text-dim)" }}>
-                {t(
-                  "Semua yang tercantum di halaman ini bisa ditelusuri. Tautan repositori menuju kode sungguhan; tautan live menuju situs yang berjalan hari ini.",
-                  "Everything listed on this page can be traced. Repository links go to real code; live links go to sites running today.",
-                )}
-              </p>
               <div className="flex flex-wrap gap-2 pt-2">
                 {profile.roles.map((r) => (
                   <span
@@ -81,7 +76,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-6xl gap-px px-5 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
           {[
             { n: 60.3, suffix: " rb", label: t("Pengikut TikTok", "TikTok followers"), note: t("@vinbryyt, sejak 2018", "@vinbryyt, since 2018") },
-            { n: 127, suffix: "", label: t("Repositori publik", "Public repositories"), note: "GitHub API" },
+            { n: 130, suffix: "", label: t("Repositori publik", "Public repositories"), note: "GitHub API" },
             { n: 20, suffix: "+", label: t("Produk dengan tautan live", "Products with a live link"), note: t("Terverifikasi", "Verified") },
             {
               n: Math.round(audience.communityFollowers / 100) / 10,
@@ -185,6 +180,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Afiliasi />
 
       <Presence />
 

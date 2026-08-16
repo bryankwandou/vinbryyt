@@ -25,16 +25,16 @@ export function GaleriIsi({ foto }: { foto: Foto[] }) {
         <Reveal delay={0.4}>
           <p className="mt-7 max-w-2xl text-[16px] leading-relaxed" style={{ color: "var(--text-dim)" }}>
             {t(
-              `${foto.length} karya yang diterbitkan sebagai NFT di blockchain Tezos lewat objkt. Gambarnya diambil dari IPFS lalu disimpan di sini supaya halaman tidak bergantung pada gerbang publik yang sering lambat — tetapi setiap karya tetap membawa tautan ke catatan aslinya, dan kepemilikannya bisa diperiksa siapa pun di rantai.`,
-              `${foto.length} works published as NFTs on the Tezos blockchain through objkt. The images were pulled from IPFS and stored here so the page never depends on public gateways, which are often slow — but every piece still links back to its original record, and anyone can verify the ownership on chain.`,
+              `${foto.length} karya yang diterbitkan sebagai NFT di Tezos lewat objkt. Setiap karya membawa tautan ke catatan aslinya di rantai.`,
+              `${foto.length} works published as NFTs on Tezos through objkt. Each one links back to its record on chain.`,
             )}
           </p>
         </Reveal>
         <Reveal delay={0.5}>
           <p className="mt-4 max-w-2xl text-[13.5px] leading-relaxed" style={{ color: "var(--text-faint)" }}>
             {t(
-              "Sebagian dibuat dengan bantuan alat gambar otomatis. Itu disebutkan di sini karena memang begitu adanya — bukan semuanya hasil kamera, dan tidak ada gunanya membiarkan pembaca menebak.",
-              "Some were made with the help of automated image tools. That is stated here because it is simply the case — not all of it came from a camera, and there is no point leaving the reader to guess.",
+              "Sebagian dibuat dengan bantuan alat gambar otomatis, sebagian lagi hasil kamera.",
+              "Some were made with automated image tools, others came from a camera.",
             )}
           </p>
         </Reveal>

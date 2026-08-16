@@ -32,18 +32,6 @@ export function RiwayatIntro() {
             )}
           </p>
         </Reveal>
-        <Reveal delay={0.25}>
-          <div
-            className="rounded-xl p-5 text-[13.5px] leading-relaxed"
-            style={{ border: "1px solid var(--line)", background: "var(--surface)", color: "var(--text-dim)" }}
-          >
-            <p className="mono-label mb-3">{t("Catatan tentang sumber", "A note on sources")}</p>
-            {t(
-              "Butir bertanda belum terkonfirmasi berasal dari keterangan pribadi yang tidak bisa dicocokkan ke arsip terbuka — TikTok dan Instagram menutup halamannya dari pembacaan otomatis. Butir lain menyertakan asal datanya.",
-              "Entries marked not confirmed come from personal accounts that could not be matched against any open archive — TikTok and Instagram close their pages to automated reading. Every other entry states where its data came from.",
-            )}
-          </div>
-        </Reveal>
       </div>
     </section>
   );

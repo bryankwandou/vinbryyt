@@ -18,6 +18,7 @@ type Repo = {
   disentuh: string | null;
   repo: string;
   live: string | null;
+  fork?: boolean;
   gambar: string | null;
 };
 
@@ -140,17 +141,27 @@ export function FullCatalog() {
                   <p className="font-mono text-[10px] tracking-[0.15em]" style={{ color: "var(--text-faint)" }}>
                     {x.bahasa.toUpperCase()}
                   </p>
-                  {x.live && (
-                    <span
-                      className="shrink-0 rounded-full px-2 py-0.5 font-mono text-[9px] tracking-[0.12em]"
-                      style={{
-                        background: "color-mix(in srgb, var(--accent) 15%, transparent)",
-                        color: "var(--accent)",
-                      }}
-                    >
-                      LIVE
-                    </span>
-                  )}
+                  <span className="flex shrink-0 gap-1.5">
+                    {x.fork && (
+                      <span
+                        className="rounded-full px-2 py-0.5 font-mono text-[9px] tracking-[0.12em]"
+                        style={{ border: "1px solid var(--line-strong)", color: "var(--text-faint)" }}
+                      >
+                        {t("SALINAN", "FORK")}
+                      </span>
+                    )}
+                    {x.live && (
+                      <span
+                        className="rounded-full px-2 py-0.5 font-mono text-[9px] tracking-[0.12em]"
+                        style={{
+                          background: "color-mix(in srgb, var(--accent) 15%, transparent)",
+                          color: "var(--accent)",
+                        }}
+                      >
+                        LIVE
+                      </span>
+                    )}
+                  </span>
                 </div>
 
                 <h2 className="mt-2 text-[16.5px] font-semibold leading-snug tracking-tight">

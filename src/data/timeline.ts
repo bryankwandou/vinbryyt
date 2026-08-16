@@ -169,12 +169,12 @@ export const chapters: Chapter[] = [
     title: "Kode mulai dibuka",
     titleEn: "The code goes public",
     body:
-      "Akun GitHub dibuat pada tanggal ini, dan dalam enam bulan berikutnya terisi 128 " +
+      "Akun GitHub dibuat pada tanggal ini, dan dalam enam bulan berikutnya terisi 130 " +
       "repositori publik — semuanya bisa dilihat di halaman Arsip. Tanggalnya diambil dari " +
       "metadata akun, jadi bisa diperiksa sendiri oleh siapa pun.",
     bodyEn:
       "The GitHub account was created on this date, and over the following six months filled " +
-      "with 128 public repositories — all of them visible on the Archive page. The date comes " +
+      "with 130 public repositories — all of them visible on the Archive page. The date comes " +
       "from the account metadata, so anyone can check it themselves.",
     confirmed: true,
     source: "GitHub API, /users/bryankwandou",

@@ -87,9 +87,9 @@ export const socials: SocialLink[] = [
     label: "GitHub",
     handle: "@bryankwandou",
     href: "https://github.com/bryankwandou",
-    note: "128 repositori publik, semuanya terbuka untuk dibaca.",
-    noteEn: "128 public repositories, all open to read.",
-    metrics: { posts: 128 },
+    note: "130 repositori publik, semuanya terbuka untuk dibaca.",
+    noteEn: "130 public repositories, all open to read.",
+    metrics: { posts: 130 },
     verified: true,
   },
   {

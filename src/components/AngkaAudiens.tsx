@@ -73,8 +73,8 @@ export function AngkaAudiens() {
 
       <p className="mt-8 max-w-2xl text-[13.5px] leading-relaxed" style={{ color: "var(--text-faint)" }}>
         {t(
-          "Angka Instagram terbaca dari tag pratinjau tautan di tiap halaman profil. Angka TikTok berasal dari widget embed kreator resmi — kanal penyematan yang disediakan TikTok untuk dipasang di situs luar, sehingga datanya terbuka tanpa perlu masuk akun. Jumlah karya Tezos dihitung langsung dari rantai. Yang tersisa kosong hanya satu: kanal YouTube, yang sudah ditutup platform. Wayback Machine, SocialBlade, dan mesin pencari tidak menyimpan satu pun rekaman, jadi kolomnya sengaja dibiarkan bertanda, bukan diisi perkiraan.",
-          "The Instagram numbers were read from the link-preview tags on each profile page. The TikTok numbers come from the official creator embed widget — the channel TikTok provides for outside sites, so the data is open without signing in. The Tezos count is read straight off the chain. Only one column stays empty: the YouTube channel, which the platform closed. The Wayback Machine, SocialBlade, and ordinary search engines hold no record of it, so the column is deliberately left marked rather than filled with a guess.",
+          "Angka Instagram dari tag pratinjau profil, angka TikTok dari widget embed kreator resmi, jumlah karya Tezos dari rantai. Kanal YouTube sudah ditutup platform, jadi kolomnya dibiarkan kosong.",
+          "Instagram figures from profile link-preview tags, TikTok from the official creator embed widget, the Tezos count straight off the chain. The YouTube channel was closed by the platform, so that column stays empty.",
         )}
       </p>
     </section>

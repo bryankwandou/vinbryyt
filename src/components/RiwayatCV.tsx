@@ -34,8 +34,8 @@ export function RiwayatCV() {
             </h2>
             <p className="mt-5 max-w-lg text-[15px] leading-relaxed" style={{ color: "var(--text-dim)" }}>
               {t(
-                "Semuanya disalin dari berkas profil LinkedIn yang diekspor sendiri oleh pemiliknya — termasuk nomor surat keputusan rektor, supaya bisa diperiksa.",
-                "All of it copied from his own exported LinkedIn profile — including the rector decree number, so it can be checked.",
+                "Disalin dari berkas profil LinkedIn, termasuk nomor surat keputusan rektor.",
+                "Taken from the exported LinkedIn profile, including the rector decree number.",
               )}
             </p>
           </Reveal>

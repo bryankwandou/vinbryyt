@@ -1,20 +1,5 @@
 [
   {
-    "slug": "nngesport",
-    "nama": "nngesport",
-    "deskripsi": "Situs resmi NNG Esport. Organisasi esport dari Abepura, Jayapura, Papua, berdiri sejak 2010.",
-    "ringkas": "Situs resmi NNG Esport. Organisasi berbasis di Abepura, Jayapura, Papua, berdiri sejak 2010.",
-    "bahasa": "HTML",
-    "topik": [],
-    "bintang": 0,
-    "dibuat": "2026-08-07",
-    "disentuh": "2026-08-14",
-    "repo": "https://github.com/bryankwandou/nngesport",
-    "live": null,
-    "lisensi": null,
-    "gambar": "/proyek/nngesport.webp"
-  },
-  {
     "slug": "arbiter",
     "nama": "arbiter",
     "deskripsi": null,
@@ -23,26 +8,28 @@
     "topik": [],
     "bintang": 0,
     "dibuat": "2026-07-14",
-    "disentuh": "2026-08-14",
+    "disentuh": "2026-08-16",
     "repo": "https://github.com/bryankwandou/arbiter",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/arbiter.webp"
   },
   {
-    "slug": "tokenwatt",
-    "nama": "tokenwatt",
-    "deskripsi": "A personal meter for AI coding-agent token usage. Reads Claude Code and Codex logs, prices them at published API rates, publishes one page.",
-    "ringkas": "Every night the collector reads the session logs that Claude Code and Codex write to disk, aggregates them into one record per calendar day, prices those records against published API rates, and publishes the result to a single page you can open from any device.",
+    "slug": "stele",
+    "nama": "stele",
+    "deskripsi": "Catatan on-chain atas praktik membaca teks suci. Token yang sengaja tidak bernilai — ia tanda terima, bukan upah. Solana devnet.",
+    "ringkas": "Stele mencatat kebiasaan membaca teks suci ke Solana devnet. Tiga tradisi tersedia sejak awal — Alkitab, Al-Qur'an, dan Dhammapada — lewat arsip terbuka yang dirawat pihak lain, bukan salinan yang kami simpan sendiri.",
     "bahasa": "TypeScript",
     "topik": [],
     "bintang": 0,
-    "dibuat": "2026-08-14",
-    "disentuh": "2026-08-14",
-    "repo": "https://github.com/bryankwandou/tokenwatt",
+    "dibuat": "2026-08-12",
+    "disentuh": "2026-08-16",
+    "repo": "https://github.com/bryankwandou/stele",
     "live": null,
     "lisensi": null,
-    "gambar": "/proyek/tokenwatt.webp"
+    "fork": false,
+    "gambar": "/proyek/stele.webp"
   },
   {
     "slug": "vinbryyt",
@@ -53,11 +40,108 @@
     "topik": [],
     "bintang": 0,
     "dibuat": "2026-08-07",
-    "disentuh": "2026-08-14",
+    "disentuh": "2026-08-15",
     "repo": "https://github.com/bryankwandou/vinbryyt",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/vinbryyt.webp"
+  },
+  {
+    "slug": "forkroot",
+    "nama": "forkroot",
+    "deskripsi": "A game platform where every fork records the work it grew from, and revenue settles back along that chain on Solana.",
+    "ringkas": "A game platform where every published work records the work it grew from, and revenue settles back along that chain automatically.",
+    "bahasa": "TypeScript",
+    "topik": [],
+    "bintang": 0,
+    "dibuat": "2026-08-15",
+    "disentuh": "2026-08-15",
+    "repo": "https://github.com/bryankwandou/forkroot",
+    "live": null,
+    "lisensi": null,
+    "fork": false,
+    "gambar": "/proyek/forkroot.webp"
+  },
+  {
+    "slug": "tokenwatt",
+    "nama": "tokenwatt",
+    "deskripsi": "A personal meter for AI coding-agent token usage. Reads Claude Code and Codex logs, prices them at published API rates, publishes one page.",
+    "ringkas": "Every night the collector reads the session logs that Claude Code and Codex write to disk, aggregates them into one record per calendar day, prices those records against published API rates, and publishes the result to a single page you can open from any device.",
+    "bahasa": "TypeScript",
+    "topik": [],
+    "bintang": 0,
+    "dibuat": "2026-08-14",
+    "disentuh": "2026-08-15",
+    "repo": "https://github.com/bryankwandou/tokenwatt",
+    "live": null,
+    "lisensi": null,
+    "fork": false,
+    "gambar": "/proyek/tokenwatt.webp"
+  },
+  {
+    "slug": "kithra",
+    "nama": "kithra",
+    "deskripsi": "A chat companion with a fixed personality and an open memory - every fact it keeps about you is a row you can read, edit, or erase.",
+    "ringkas": "Most assistants keep a private file on you that you never get to read. Kithra turns that file into a ledger you can open, correct, empty — and prove is yours, by anchoring a hash of it to Solana under your own wallet.",
+    "bahasa": "TypeScript",
+    "topik": [],
+    "bintang": 0,
+    "dibuat": "2026-08-12",
+    "disentuh": "2026-08-15",
+    "repo": "https://github.com/bryankwandou/kithra",
+    "live": null,
+    "lisensi": null,
+    "fork": false,
+    "gambar": "/proyek/kithra.webp"
+  },
+  {
+    "slug": "cadensa",
+    "nama": "cadensa",
+    "deskripsi": "Cadensa — pencatat ritme kesehatan reproduksi. Cadence Index, sinyal on-device, brankas terenkripsi ujung-ke-ujung.",
+    "ringkas": "Pencatat ritme kesehatan reproduksi. Basisnya satu temuan epidemiologis yang jarang dibicarakan: pria yang berejakulasi sekitar 21 kali per bulan menunjukkan angka kejadian kanker prostat yang lebih rendah dibanding pria yang berejakulasi 4–7 kali per bulan.",
+    "bahasa": "TypeScript",
+    "topik": [],
+    "bintang": 0,
+    "dibuat": "2026-08-03",
+    "disentuh": "2026-08-15",
+    "repo": "https://github.com/bryankwandou/cadensa",
+    "live": null,
+    "lisensi": null,
+    "fork": false,
+    "gambar": "/proyek/cadensa.webp"
+  },
+  {
+    "slug": "bryankwandou",
+    "nama": "bryankwandou",
+    "deskripsi": null,
+    "ringkas": "Builder in Makassar, Indonesia. I write software that leaves a trail — twenty-one shipped products and 104 public repositories, most of them circling one question: after the machine acts, can a person still check what happened?",
+    "bahasa": "TypeScript",
+    "topik": [],
+    "bintang": 0,
+    "dibuat": "2026-07-15",
+    "disentuh": "2026-08-15",
+    "repo": "https://github.com/bryankwandou/bryankwandou",
+    "live": null,
+    "lisensi": null,
+    "fork": false,
+    "gambar": "/proyek/bryankwandou.webp"
+  },
+  {
+    "slug": "nngesport",
+    "nama": "nngesport",
+    "deskripsi": "Situs resmi NNG Esport. Organisasi esport dari Abepura, Jayapura, Papua, berdiri sejak 2010.",
+    "ringkas": "Situs resmi NNG Esport. Organisasi berbasis di Abepura, Jayapura, Papua, berdiri sejak 2010.",
+    "bahasa": "HTML",
+    "topik": [],
+    "bintang": 0,
+    "dibuat": "2026-08-07",
+    "disentuh": "2026-08-15",
+    "repo": "https://github.com/bryankwandou/nngesport",
+    "live": null,
+    "lisensi": null,
+    "fork": false,
+    "gambar": "/proyek/nngesport.webp"
   },
   {
     "slug": "parlore",
@@ -72,6 +156,7 @@
     "repo": "https://github.com/bryankwandou/parlore",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/parlore.webp"
   },
   {
@@ -87,6 +172,7 @@
     "repo": "https://github.com/bryankwandou/assaykit",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/assaykit.webp"
   },
   {
@@ -102,6 +188,7 @@
     "repo": "https://github.com/bryankwandou/handpress",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/handpress.webp"
   },
   {
@@ -117,6 +204,7 @@
     "repo": "https://github.com/bryankwandou/marque",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/marque.webp"
   },
   {
@@ -132,6 +220,7 @@
     "repo": "https://github.com/bryankwandou/larasa",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/larasa.webp"
   },
   {
@@ -147,22 +236,8 @@
     "repo": "https://github.com/bryankwandou/grainroom",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/grainroom.webp"
-  },
-  {
-    "slug": "bryankwandou",
-    "nama": "bryankwandou",
-    "deskripsi": null,
-    "ringkas": "Builder in Makassar, Indonesia. I write software that leaves a trail — twenty-one shipped products and 104 public repositories, most of them circling one question: after the machine acts, can a person still check what happened?",
-    "bahasa": "TypeScript",
-    "topik": [],
-    "bintang": 0,
-    "dibuat": "2026-07-15",
-    "disentuh": "2026-08-13",
-    "repo": "https://github.com/bryankwandou/bryankwandou",
-    "live": null,
-    "lisensi": null,
-    "gambar": "/proyek/bryankwandou.webp"
   },
   {
     "slug": "cairin",
@@ -177,6 +252,7 @@
     "repo": "https://github.com/bryankwandou/cairin",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/cairin.webp"
   },
   {
@@ -192,37 +268,8 @@
     "repo": "https://github.com/bryankwandou/nullstamp",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/nullstamp.webp"
-  },
-  {
-    "slug": "kithra",
-    "nama": "kithra",
-    "deskripsi": "A chat companion with a fixed personality and an open memory - every fact it keeps about you is a row you can read, edit, or erase.",
-    "ringkas": "Most companion apps keep a private file on you that you never get to read. Kithra turns that file into a page you can open, correct, and empty whenever you like — and it never leaves your browser.",
-    "bahasa": "TypeScript",
-    "topik": [],
-    "bintang": 0,
-    "dibuat": "2026-08-12",
-    "disentuh": "2026-08-12",
-    "repo": "https://github.com/bryankwandou/kithra",
-    "live": null,
-    "lisensi": null,
-    "gambar": "/proyek/kithra.webp"
-  },
-  {
-    "slug": "stele",
-    "nama": "stele",
-    "deskripsi": "Catatan on-chain atas praktik membaca teks suci. Token yang sengaja tidak bernilai — ia tanda terima, bukan upah. Solana devnet.",
-    "ringkas": "Stele mencatat kebiasaan membaca teks suci ke Solana devnet. Tiga tradisi tersedia sejak awal — Alkitab, Al-Qur'an, dan Dhammapada — lewat arsip terbuka yang dirawat pihak lain, bukan salinan yang kami simpan sendiri.",
-    "bahasa": "TypeScript",
-    "topik": [],
-    "bintang": 0,
-    "dibuat": "2026-08-12",
-    "disentuh": "2026-08-12",
-    "repo": "https://github.com/bryankwandou/stele",
-    "live": null,
-    "lisensi": null,
-    "gambar": "/proyek/stele.webp"
   },
   {
     "slug": "fluentia",
@@ -237,6 +284,7 @@
     "repo": "https://github.com/bryankwandou/fluentia",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/fluentia.webp"
   },
   {
@@ -252,6 +300,7 @@
     "repo": "https://github.com/bryankwandou/kernly",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/kernly.webp"
   },
   {
@@ -267,6 +316,7 @@
     "repo": "https://github.com/bryankwandou/tanki-request",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/tanki-request.webp"
   },
   {
@@ -282,6 +332,7 @@
     "repo": "https://github.com/bryankwandou/wayproof",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/wayproof.webp"
   },
   {
@@ -297,6 +348,7 @@
     "repo": "https://github.com/bryankwandou/forewrit",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/forewrit.webp"
   },
   {
@@ -312,6 +364,7 @@
     "repo": "https://github.com/bryankwandou/tallystick",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/tallystick.webp"
   },
   {
@@ -327,6 +380,7 @@
     "repo": "https://github.com/bryankwandou/spigot",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/spigot.webp"
   },
   {
@@ -342,6 +396,7 @@
     "repo": "https://github.com/bryankwandou/mettle",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/mettle.webp"
   },
   {
@@ -357,6 +412,7 @@
     "repo": "https://github.com/bryankwandou/glyphra",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/glyphra.webp"
   },
   {
@@ -372,6 +428,7 @@
     "repo": "https://github.com/bryankwandou/solera",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/solera.webp"
   },
   {
@@ -387,6 +444,7 @@
     "repo": "https://github.com/bryankwandou/inkfold",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/inkfold.webp"
   },
   {
@@ -402,6 +460,7 @@
     "repo": "https://github.com/bryankwandou/stemloom",
     "live": "https://stemloom.vercel.app",
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/stemloom.webp"
   },
   {
@@ -423,6 +482,7 @@
     "repo": "https://github.com/bryankwandou/cutwright",
     "live": "https://cutwright.vercel.app",
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/cutwright.webp"
   },
   {
@@ -438,6 +498,7 @@
     "repo": "https://github.com/bryankwandou/kanvara",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/kanvara.webp"
   },
   {
@@ -453,6 +514,7 @@
     "repo": "https://github.com/bryankwandou/keelstack",
     "live": null,
     "lisensi": "Apache-2.0",
+    "fork": false,
     "gambar": "/proyek/keelstack.webp"
   },
   {
@@ -475,22 +537,8 @@
     "repo": "https://github.com/bryankwandou/aval-rail",
     "live": "https://aval-site.vercel.app",
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/aval-rail.webp"
-  },
-  {
-    "slug": "cadensa",
-    "nama": "cadensa",
-    "deskripsi": "Cadensa — pencatat ritme kesehatan reproduksi. Cadence Index, sinyal on-device, brankas terenkripsi ujung-ke-ujung.",
-    "ringkas": "Pencatat ritme kesehatan reproduksi. Basisnya satu temuan epidemiologis yang jarang dibicarakan: pria yang berejakulasi sekitar 21 kali per bulan menunjukkan angka kejadian kanker prostat yang lebih rendah dibanding pria yang berejakulasi 4–7 kali per bulan.",
-    "bahasa": "TypeScript",
-    "topik": [],
-    "bintang": 0,
-    "dibuat": "2026-08-03",
-    "disentuh": "2026-08-06",
-    "repo": "https://github.com/bryankwandou/cadensa",
-    "live": null,
-    "lisensi": null,
-    "gambar": "/proyek/cadensa.webp"
   },
   {
     "slug": "loomstack",
@@ -505,6 +553,7 @@
     "repo": "https://github.com/bryankwandou/loomstack",
     "live": null,
     "lisensi": "Apache-2.0",
+    "fork": false,
     "gambar": "/proyek/loomstack.webp"
   },
   {
@@ -520,6 +569,7 @@
     "repo": "https://github.com/bryankwandou/aval-site",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/aval-site.webp"
   },
   {
@@ -535,6 +585,7 @@
     "repo": "https://github.com/bryankwandou/antigravity-ide-frontend",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/antigravity-ide-frontend.webp"
   },
   {
@@ -550,6 +601,7 @@
     "repo": "https://github.com/bryankwandou/kubantara",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/kubantara.webp"
   },
   {
@@ -565,6 +617,7 @@
     "repo": "https://github.com/bryankwandou/skyseed-isles",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/skyseed-isles.webp"
   },
   {
@@ -580,6 +633,7 @@
     "repo": "https://github.com/bryankwandou/product-catalog",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/product-catalog.webp"
   },
   {
@@ -595,6 +649,7 @@
     "repo": "https://github.com/bryankwandou/visitrail",
     "live": "https://visitrail.vercel.app",
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/visitrail.webp"
   },
   {
@@ -610,6 +665,7 @@
     "repo": "https://github.com/bryankwandou/veylock",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/veylock.webp"
   },
   {
@@ -625,6 +681,7 @@
     "repo": "https://github.com/bryankwandou/veristart-agentic-feasibility",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/veristart-agentic-feasibility.webp"
   },
   {
@@ -640,6 +697,7 @@
     "repo": "https://github.com/bryankwandou/stewardlane",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/stewardlane.webp"
   },
   {
@@ -655,6 +713,7 @@
     "repo": "https://github.com/bryankwandou/servetrace",
     "live": "https://servetrace.vercel.app",
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/servetrace.webp"
   },
   {
@@ -670,6 +729,7 @@
     "repo": "https://github.com/bryankwandou/mirrorqa-ai",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/mirrorqa-ai.webp"
   },
   {
@@ -685,6 +745,7 @@
     "repo": "https://github.com/bryankwandou/kinferry",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/kinferry.webp"
   },
   {
@@ -700,6 +761,7 @@
     "repo": "https://github.com/bryankwandou/galleryos",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/galleryos.webp"
   },
   {
@@ -715,6 +777,7 @@
     "repo": "https://github.com/bryankwandou/freightlatch",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/freightlatch.webp"
   },
   {
@@ -730,6 +793,7 @@
     "repo": "https://github.com/bryankwandou/evercue",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/evercue.webp"
   },
   {
@@ -745,6 +809,7 @@
     "repo": "https://github.com/bryankwandou/dwellnerve",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/dwellnerve.webp"
   },
   {
@@ -760,6 +825,7 @@
     "repo": "https://github.com/bryankwandou/dissentgrid",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/dissentgrid.webp"
   },
   {
@@ -775,6 +841,7 @@
     "repo": "https://github.com/bryankwandou/civiflow",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/civiflow.webp"
   },
   {
@@ -790,6 +857,7 @@
     "repo": "https://github.com/bryankwandou/childcareos",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/childcareos.webp"
   },
   {
@@ -805,6 +873,7 @@
     "repo": "https://github.com/bryankwandou/briefrail",
     "live": "https://briefrail.vercel.app",
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/briefrail.webp"
   },
   {
@@ -820,6 +889,7 @@
     "repo": "https://github.com/bryankwandou/axleveto",
     "live": "https://axleveto.vercel.app",
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/axleveto.webp"
   },
   {
@@ -835,6 +905,7 @@
     "repo": "https://github.com/bryankwandou/autorepairos",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/autorepairos.webp"
   },
   {
@@ -850,6 +921,7 @@
     "repo": "https://github.com/bryankwandou/accordos-ai",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/accordos-ai.webp"
   },
   {
@@ -865,6 +937,7 @@
     "repo": "https://github.com/bryankwandou/vowrail",
     "live": "https://vowrail.vercel.app",
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/vowrail.webp"
   },
   {
@@ -880,6 +953,7 @@
     "repo": "https://github.com/bryankwandou/x402gate",
     "live": "https://x402gate.vercel.app",
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/x402gate.webp"
   },
   {
@@ -895,6 +969,7 @@
     "repo": "https://github.com/bryankwandou/springboot-login-jwt",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/springboot-login-jwt.webp"
   },
   {
@@ -910,6 +985,7 @@
     "repo": "https://github.com/bryankwandou/nusakarya-recovery-2b333e3",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/nusakarya-recovery-2b333e3.webp"
   },
   {
@@ -925,6 +1001,7 @@
     "repo": "https://github.com/bryankwandou/meadowfar",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/meadowfar.webp"
   },
   {
@@ -940,6 +1017,7 @@
     "repo": "https://github.com/bryankwandou/lineproof",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/lineproof.webp"
   },
   {
@@ -955,6 +1033,7 @@
     "repo": "https://github.com/bryankwandou/solumkm",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/solumkm.webp"
   },
   {
@@ -970,6 +1049,7 @@
     "repo": "https://github.com/bryankwandou/tugas-tahap-0-satudata-sulsel",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/tugas-tahap-0-satudata-sulsel.webp"
   },
   {
@@ -985,7 +1065,24 @@
     "repo": "https://github.com/bryankwandou/proofcast",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/proofcast.webp"
+  },
+  {
+    "slug": "zeroclaw-plugins",
+    "nama": "zeroclaw-plugins",
+    "deskripsi": "Official plugin registry for ZeroClaw — zeroclaw plugin search/install",
+    "ringkas": "The official catalog of ZeroClaw WASM plugins — self-contained WIT components the agent can fetch and install on demand. This is what zeroclaw plugin search and zeroclaw plugin install read by default.",
+    "bahasa": "Lainnya",
+    "topik": [],
+    "bintang": 0,
+    "dibuat": "2026-07-20",
+    "disentuh": "2026-07-20",
+    "repo": "https://github.com/bryankwandou/zeroclaw-plugins",
+    "live": null,
+    "lisensi": null,
+    "fork": true,
+    "gambar": "/proyek/zeroclaw-plugins.webp"
   },
   {
     "slug": "aval-core",
@@ -1000,6 +1097,7 @@
     "repo": "https://github.com/bryankwandou/aval-core",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/aval-core.webp"
   },
   {
@@ -1015,6 +1113,7 @@
     "repo": "https://github.com/bryankwandou/matchmind",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/matchmind.webp"
   },
   {
@@ -1030,6 +1129,7 @@
     "repo": "https://github.com/bryankwandou/anamneon",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/anamneon.webp"
   },
   {
@@ -1045,6 +1145,7 @@
     "repo": "https://github.com/bryankwandou/vericodeai",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/vericodeai.webp"
   },
   {
@@ -1060,6 +1161,7 @@
     "repo": "https://github.com/bryankwandou/atlas-quant",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/atlas-quant.webp"
   },
   {
@@ -1075,6 +1177,7 @@
     "repo": "https://github.com/bryankwandou/verichain",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/verichain.webp"
   },
   {
@@ -1090,6 +1193,7 @@
     "repo": "https://github.com/bryankwandou/qrcode1",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/qrcode1.webp"
   },
   {
@@ -1105,6 +1209,7 @@
     "repo": "https://github.com/bryankwandou/qrcodefail-1",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/qrcodefail-1.webp"
   },
   {
@@ -1120,6 +1225,7 @@
     "repo": "https://github.com/bryankwandou/QR-CODE-GENERATOR",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/qr-code-generator.webp"
   },
   {
@@ -1135,6 +1241,7 @@
     "repo": "https://github.com/bryankwandou/NNG-TIKTOK-LIVE-AGENT",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/nng-tiktok-live-agent.webp"
   },
   {
@@ -1150,6 +1257,7 @@
     "repo": "https://github.com/bryankwandou/trustpay-sea",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/trustpay-sea.webp"
   },
   {
@@ -1165,6 +1273,7 @@
     "repo": "https://github.com/bryankwandou/EscrowKita",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/escrowkita.webp"
   },
   {
@@ -1180,6 +1289,7 @@
     "repo": "https://github.com/bryankwandou/MOVV-BMI",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/movv-bmi.webp"
   },
   {
@@ -1195,6 +1305,7 @@
     "repo": "https://github.com/bryankwandou/proofofplay",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/proofofplay.webp"
   },
   {
@@ -1210,6 +1321,7 @@
     "repo": "https://github.com/bryankwandou/vinbryyt-drip-revival",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/vinbryyt-drip-revival.webp"
   },
   {
@@ -1225,6 +1337,7 @@
     "repo": "https://github.com/bryankwandou/QUANTCOIN",
     "live": null,
     "lisensi": "Apache-2.0",
+    "fork": false,
     "gambar": "/proyek/quantcoin.webp"
   },
   {
@@ -1240,6 +1353,7 @@
     "repo": "https://github.com/bryankwandou/NNG-PROTOCOL",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/nng-protocol.webp"
   },
   {
@@ -1255,6 +1369,7 @@
     "repo": "https://github.com/bryankwandou/NNG-GAME-TOPUP",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/nng-game-topup.webp"
   },
   {
@@ -1270,6 +1385,7 @@
     "repo": "https://github.com/bryankwandou/x-autopilot",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/x-autopilot.webp"
   },
   {
@@ -1285,6 +1401,7 @@
     "repo": "https://github.com/bryankwandou/superteam-ukraine",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/superteam-ukraine.webp"
   },
   {
@@ -1300,6 +1417,7 @@
     "repo": "https://github.com/bryankwandou/ChainShift",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/chainshift.webp"
   },
   {
@@ -1315,6 +1433,7 @@
     "repo": "https://github.com/bryankwandou/OMNIA",
     "live": null,
     "lisensi": "NOASSERTION",
+    "fork": false,
     "gambar": "/proyek/omnia.webp"
   },
   {
@@ -1330,6 +1449,7 @@
     "repo": "https://github.com/bryankwandou/vibe",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/vibe.webp"
   },
   {
@@ -1345,6 +1465,7 @@
     "repo": "https://github.com/bryankwandou/basedrop",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/basedrop.webp"
   },
   {
@@ -1360,6 +1481,7 @@
     "repo": "https://github.com/bryankwandou/portfolio-cv",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/portfolio-cv.webp"
   },
   {
@@ -1375,6 +1497,7 @@
     "repo": "https://github.com/bryankwandou/stake-to-done",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/stake-to-done.webp"
   },
   {
@@ -1390,6 +1513,7 @@
     "repo": "https://github.com/bryankwandou/solidity-personal-vault-mancer",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/solidity-personal-vault-mancer.webp"
   },
   {
@@ -1405,6 +1529,7 @@
     "repo": "https://github.com/bryankwandou/botcall-protocol",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/botcall-protocol.webp"
   },
   {
@@ -1420,6 +1545,7 @@
     "repo": "https://github.com/bryankwandou/habitforge",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/habitforge.webp"
   },
   {
@@ -1435,6 +1561,7 @@
     "repo": "https://github.com/bryankwandou/InspiraVerse",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/inspiraverse.webp"
   },
   {
@@ -1450,6 +1577,7 @@
     "repo": "https://github.com/bryankwandou/ComputerVision-Project1",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/computervision-project1.webp"
   },
   {
@@ -1465,6 +1593,7 @@
     "repo": "https://github.com/bryankwandou/SmashGO",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/smashgo.webp"
   },
   {
@@ -1480,6 +1609,7 @@
     "repo": "https://github.com/bryankwandou/MachineLearning-project3-kelompok2",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/machinelearning-project3-kelompok2.webp"
   },
   {
@@ -1495,6 +1625,7 @@
     "repo": "https://github.com/bryankwandou/NusaHarvest",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/nusaharvest.webp"
   },
   {
@@ -1510,6 +1641,7 @@
     "repo": "https://github.com/bryankwandou/solq.my.id",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/solq-my-id.webp"
   },
   {
@@ -1525,6 +1657,7 @@
     "repo": "https://github.com/bryankwandou/zynqio",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/zynqio.webp"
   },
   {
@@ -1540,6 +1673,7 @@
     "repo": "https://github.com/bryankwandou/Veztra",
     "live": null,
     "lisensi": "MIT",
+    "fork": false,
     "gambar": "/proyek/veztra.webp"
   },
   {
@@ -1555,6 +1689,7 @@
     "repo": "https://github.com/bryankwandou/nngpt",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/nngpt.webp"
   },
   {
@@ -1570,6 +1705,7 @@
     "repo": "https://github.com/bryankwandou/hydraflow-water-reminder",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/hydraflow-water-reminder.webp"
   },
   {
@@ -1585,6 +1721,7 @@
     "repo": "https://github.com/bryankwandou/flowtask-smart-todo-app",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/flowtask-smart-todo-app.webp"
   },
   {
@@ -1600,6 +1737,7 @@
     "repo": "https://github.com/bryankwandou/focusforge-pomodoro",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/focusforge-pomodoro.webp"
   },
   {
@@ -1615,6 +1753,7 @@
     "repo": "https://github.com/bryankwandou/pocketledger-offline-expense-tracker",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/pocketledger-offline-expense-tracker.webp"
   },
   {
@@ -1630,6 +1769,7 @@
     "repo": "https://github.com/bryankwandou/velthoryn",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/velthoryn.webp"
   },
   {
@@ -1645,6 +1785,7 @@
     "repo": "https://github.com/bryankwandou/removix-ai",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/removix-ai.webp"
   },
   {
@@ -1660,6 +1801,7 @@
     "repo": "https://github.com/bryankwandou/semester3dan4",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/semester3dan4.webp"
   },
   {
@@ -1675,6 +1817,7 @@
     "repo": "https://github.com/bryankwandou/blockbite-xyz",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/blockbite-xyz.webp"
   },
   {
@@ -1690,6 +1833,7 @@
     "repo": "https://github.com/bryankwandou/anchor-debugger-skill",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/anchor-debugger-skill.webp"
   },
   {
@@ -1705,6 +1849,7 @@
     "repo": "https://github.com/bryankwandou/chainops-dashboard-ui-kit",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/chainops-dashboard-ui-kit.webp"
   },
   {
@@ -1720,6 +1865,7 @@
     "repo": "https://github.com/bryankwandou/antigravity-prime-hunter",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/antigravity-prime-hunter.webp"
   },
   {
@@ -1735,6 +1881,7 @@
     "repo": "https://github.com/bryankwandou/solgig-mainnet",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/solgig-mainnet.webp"
   },
   {
@@ -1750,6 +1897,7 @@
     "repo": "https://github.com/bryankwandou/kopedu-nft-solana",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/kopedu-nft-solana.webp"
   },
   {
@@ -1765,6 +1913,7 @@
     "repo": "https://github.com/bryankwandou/CoffeeShop-EnterpriseFinalTest",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/coffeeshop-enterprisefinaltest.webp"
   },
   {
@@ -1780,6 +1929,7 @@
     "repo": "https://github.com/bryankwandou/veilspire",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/veilspire.webp"
   },
   {
@@ -1795,6 +1945,7 @@
     "repo": "https://github.com/bryankwandou/kopedu",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/kopedu.webp"
   },
   {
@@ -1810,6 +1961,7 @@
     "repo": "https://github.com/bryankwandou/veritair",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/veritair.webp"
   },
   {
@@ -1825,6 +1977,7 @@
     "repo": "https://github.com/bryankwandou/solgig",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/solgig.webp"
   },
   {
@@ -1840,6 +1993,7 @@
     "repo": "https://github.com/bryankwandou/feasiflow-ai",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/feasiflow-ai.webp"
   },
   {
@@ -1855,6 +2009,7 @@
     "repo": "https://github.com/bryankwandou/blockblast",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/blockblast.webp"
   },
   {
@@ -1870,6 +2025,7 @@
     "repo": "https://github.com/bryankwandou/blockbite",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/blockbite.webp"
   },
   {
@@ -1885,6 +2041,7 @@
     "repo": "https://github.com/bryankwandou/clinicflow-ai",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/clinicflow-ai.webp"
   },
   {
@@ -1900,6 +2057,7 @@
     "repo": "https://github.com/bryankwandou/quorumai",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/quorumai.webp"
   },
   {
@@ -1915,6 +2073,7 @@
     "repo": "https://github.com/bryankwandou/everanima",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/everanima.webp"
   },
   {
@@ -1930,6 +2089,7 @@
     "repo": "https://github.com/bryankwandou/diafund",
     "live": null,
     "lisensi": null,
+    "fork": false,
     "gambar": "/proyek/diafund.webp"
   }
 ]

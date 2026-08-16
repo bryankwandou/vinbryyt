@@ -58,8 +58,8 @@ export function WorkCatalog() {
           style={{ color: "var(--text-dim)" }}
         >
           {teks(
-            "Daftar ini disusun dari metadata repositori GitHub, bukan dari ingatan. Tiap kartu membawa tautan ke kodenya; yang bertanda LIVE punya situs yang bisa dibuka sekarang juga.",
-            "This list is assembled from GitHub repository metadata, not from memory. Every card links to its code; the ones marked LIVE have a site you can open right now.",
+            "Disusun dari metadata repositori GitHub. Tiap kartu membawa tautan ke kodenya; yang bertanda LIVE punya situs yang bisa dibuka.",
+            "Assembled from GitHub repository metadata. Every card links to its code; the ones marked LIVE have a site you can open.",
           )}
         </motion.p>
       </section>
@@ -142,8 +142,8 @@ export function WorkCatalog() {
         <Reveal>
           <p className="mt-16 text-center text-[13.5px]" style={{ color: "var(--text-faint)" }}>
             {teks(
-              `Menampilkan ${shown.length} dari ${projects.length} entri terkurasi. Repositori publik seluruhnya berjumlah 128 — `,
-              `Showing ${shown.length} of ${projects.length} curated entries. There are 128 public repositories in total — `,
+              `Menampilkan ${shown.length} dari ${projects.length} entri terkurasi. Repositori publik seluruhnya berjumlah 130 — `,
+              `Showing ${shown.length} of ${projects.length} curated entries. There are 130 public repositories in total — `,
             )}
             <a
               href="https://github.com/bryankwandou?tab=repositories"

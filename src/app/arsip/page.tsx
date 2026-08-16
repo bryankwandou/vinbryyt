@@ -6,7 +6,7 @@ import semua from "@/data/repos-all.json";
 export const metadata: Metadata = {
   title: "Arsip lengkap",
   description:
-    "Seluruh repositori publik Vincentius Bryan Kwandou — 128 proyek, masing-masing dengan gambar, keterangan, dan tanggal perubahan terakhir yang dibaca langsung dari GitHub.",
+    "Seluruh repositori publik Vincentius Bryan Kwandou — 130 proyek, masing-masing dengan gambar, keterangan, dan tanggal perubahan terakhir yang dibaca langsung dari GitHub.",
 };
 
 export default function ArsipPage() {

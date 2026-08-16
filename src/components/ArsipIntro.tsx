@@ -18,8 +18,8 @@ export function ArsipIntro({ total }: { total: number }) {
       <Reveal delay={0.35}>
         <p className="mt-7 max-w-2xl text-[16px] leading-relaxed" style={{ color: "var(--text-dim)" }}>
           {t(
-            `Halaman Kerja memuat pilihan yang sudah dikurasi. Halaman ini tidak mengurasi apa pun: ${total} repositori publik, semuanya, lengkap dengan gambar pratinjau dan keterangan yang dibaca langsung dari berkas README masing-masing. Yang berantakan pun ikut ditampilkan.`,
-            `The Work page carries a curated selection. This one curates nothing: all ${total} public repositories, each with its preview image and a description read straight from its own README file. The messy ones are shown too.`,
+            `Seluruh ${total} repositori publik, dengan pratinjau dan keterangan dari README masing-masing.`,
+            `All ${total} public repositories, with a preview and the description from each README.`,
           )}
         </p>
       </Reveal>
